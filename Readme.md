@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Руслан Романенко](https://up.htmlacademy.ru/adaptive/22/user/1416651).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Григорьев](https://htmlacademy.ru/profile/fuckhtml).
 
 ---
 

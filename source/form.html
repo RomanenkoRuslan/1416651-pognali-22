@@ -61,9 +61,9 @@
           <span class="form-direction__level-number level-number">99</span>level
         </p>
         <img class="form-direction__img" src="https://via.placeholder.com/50x50" alt="Фотография пользователя">
-        <button class="form-direction__button" type="button">
-          сменить фото
-        </button>
+        <a href="#" class="form-direction__button">
+          Сменить фото
+        </a>
         <p class="form-direction__hobbies hobbies">#бургер #бар #футбол #концерт #крафт</p>
         <ul class="form-direction__ways-travel ways-travel">
           <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--plane visually-hidden">
@@ -90,7 +90,7 @@
               26 мар — 29 мар
             </p>
             <a href="#" class="my-plans__change">
-              изменить
+              Изменить
             </a>
           </li>
           <li class="my-plans__item">
@@ -100,7 +100,7 @@
               1 июл — 15 июл
             </p>
             <a href="#" class="my-plans__change">
-              изменить
+              Изменить
             </a>
           </li>
         </ol>
@@ -119,27 +119,29 @@
               которых вы хотели бы позвать в поездку и ее
               предполагаемую длительность.
             </p>
-            <div class="add-plan__details">
-              <label class="add-plan__title-people">
-                ищу попутчиков:
-                <span class="add-plan__title-measure">чел.</span>
-                <input class="add-plan__people" type="number" min="1" max="10" value="2">
+            <fieldset class="add-plan__field">
+              <div class="add-plan__details">
+                <label class="add-plan__title-people">
+                  Ищу попутчиков:
+                  <span class="add-plan__title-measure">Чел.</span>
+                  <input class="add-plan__people" type="number" min="1" max="10" value="2">
+                </label>
+              </div>
+              <div class="add-plan__details">
+                <label class="add-plan__title-people">
+                  Длительность:
+                  <span class="add-plan__title-measure">Дн.</span>
+                  <input class="add-plan__people" type="number" min="1" max="100" value="3">
+                </label>
+              </div>
+              <label class="add-plan__child">
+                <input class="add-plan__child-input" type="checkbox"> Можно с детьми
               </label>
-            </div>
-            <div class="add-plan__details">
-              <label class="add-plan__title-people">
-                длительность:
-                <span class="add-plan__title-measure">дн.</span>
-                <input class="add-plan__people" type="number" min="1" max="100" value="3">
-              </label>
-            </div>
-            <label class="add-plan__child">
-              <input class="add-plan__child-input" type="checkbox"> Можно с детьми
-            </label>
+            </fieldset>
             <div class="add-plan__date">
-              <button type="button" class="add-plan__back">&lt;</button>
+              <button type="button" class="add-plan__back"><span class="visually-hidden">Прошлый месяц</span></button>
               <p class="add-plan__mounth">Март 2019</p>
-              <button type="button" class="add-plan__forward">></button>
+              <button type="button" class="add-plan__forward"><span class="visually-hidden">Следующий месяц</span></button>
               <table class="add-plan__date-table">
                 <tr class="add-plan__days-week">
                   <th class="add-plan__item add-plan__item--days-week">п</th>
@@ -217,16 +219,18 @@
               Укажите страны, которые вы хотели посетить.
               Это может быть одна или сразу несколько.
             </p>
-            <select size="1" class="add-plan__country">
-              <option>Босния и герцеговина</option>
-              <option>Бразилия</option>
-            </select>
-            <select size="1" class="add-plan__country">
-              <option>Чехия</option>
-            </select>
-            <select size="1" class="add-plan__country">
-              <option>выберите страну</option>
-            </select>
+            <fieldset class="add-plan__country-field">
+              <select size="1" class="add-plan__country">
+                <option>Босния и герцеговина</option>
+                <option>Бразилия</option>
+              </select>
+              <select size="1" class="add-plan__country">
+                <option>Чехия</option>
+              </select>
+              <select size="1" class="add-plan__country">
+                <option>Выберите страну</option>
+              </select>
+            </fieldset>
             <div class="add-plan__country-dropdown visually-hidden">
               <table class="add-plan__alphabet">
                 <tr class="add-plan__alphabet-row">
@@ -279,11 +283,13 @@
                 <li class="add-plan__country-letter-a-item">Афганистан</li>
               </ul>
             </div>
-            <select size="1" class="add-plan__country">
-              <option>добавить страну</option>
-            </select>
+            <fieldset class="add-plan__country-field">
+              <select size="1" class="add-plan__country">
+                <option>Добавить страну</option>
+              </select>
+            </fieldset>
             <a class="add-plan__next-step" href="#third-step">Следующий шаг</a>
-            <a class="add-plan__last-step" href="#first-step">на шаг назад</a>
+            <a class="add-plan__last-step" href="#first-step">На шаг назад</a>
           </div>
           <div class="add-plan__third-step">
             <h3 class="add-plan__title" id="third-step">
@@ -294,17 +300,19 @@
               Наконец, расскажите о своих планахвремяпровождения.
               Можно писать в свободной форме и ставить тэги.
             </p>
-            <h4 class="add-plan__comment-title">Босния и Герцеговина</h4>
-            <textarea class="add-plan__comment">
-              План действий
-            </textarea>
-            <h4 class="add-plan__comment-title">Чехия</h4>
-            <textarea class="add-plan__comment">
-              Пить пиво и лазить по старым замкам,
-              наслаждаться архитектурой и вот это все.
-            </textarea>
+            <fieldset class="add-plan__comment-field">
+              <h4 class="add-plan__comment-title">Босния и Герцеговина</h4>
+              <textarea class="add-plan__comment">
+                План действий
+              </textarea>
+              <h4 class="add-plan__comment-title">Чехия</h4>
+              <textarea class="add-plan__comment">
+                Пить пиво и лазить по старым замкам,
+                наслаждаться архитектурой и вот это все.
+              </textarea>
+            </fieldset>
             <button type="submit" class="add-plan__next-step">Отправить</button>
-            <a class="add-plan__last-step" href="#second-step">на шаг назад</a>
+            <a class="add-plan__last-step" href="#second-step">На шаг назад</a>
           </div>
         </form>
       </section>

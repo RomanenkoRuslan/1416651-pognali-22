@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css\style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -14,7 +15,7 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <h2 class="main-nav__slogan">В путешествие с крутыми попутчиками!</h2>
-        <ul class="main-nav__list site-list visually-hidden">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link">О сервисе</a>
           </li>
@@ -77,13 +78,13 @@
           которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
-        <p class="about-service__text about-service__text--advice">
+        <p class="about-service__slogan">
           А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
         </p>
       </section>
       <section class="direction">
         <h2 class="direction__title">Направления</h2>
-        <p class="direction__text">
+        <p class="direction__text section-text">
           Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
           куда хотели бы отправиться и чем можно там заняться.
         </p>
@@ -104,7 +105,7 @@
             <p class="direction__people">5326</p>
           </li>
         </ul>
-        <a href="#" class="direction__more">Показать все</a>
+        <a href="#" class="direction__more button-index">Показать все</a>
       </section>
       <section class="fellow-travelers">
         <h2 class="fellow-travelers__title">Попутчики</h2>
@@ -128,17 +129,17 @@
             <h3 class="fellow-travelers__user-name">Таня Фирсова</h3>
             <p class="fellow-travelers__hobbies">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <ul class="fellow-travelers__ways-travel-list">
-              <li class="fellow-travelers__ways-travel-item fellow-travelers__ways-travel-item--plane visually-hidden">
-                На самолете
+              <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--plane">
+                <span class="visually-hidden">На самолете</span>
               </li>
-              <li class="fellow-travelers__ways-travel-item fellow-travelers__ways-travel-item--bus visually-hidden">
-                На автобусе
+              <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--bus">
+                <span class="visually-hidden">На автобусе</span>
               </li>
-              <li class="fellow-travelers__ways-travel-item fellow-travelers__ways-travel-item--bicycle visually-hidden">
-                На велосипеде
+              <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--bicycle">
+                <span class="visually-hidden">На велосипеде</span>
               </li>
-              <li class="fellow-travelers__ways-travel-item fellow-travelers__ways-travel-item--run visually-hidden">
-                Бегом
+              <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--run">
+                <span class="visually-hidden">Бегом</span>
               </li>
             </ul>
           </li>
@@ -168,6 +169,7 @@
             </ul>
           </li>
         </ul>
+        <a href="#" class="fellow-travelers__more button-index">Показать все</a>
       </section>
       <section class="add-profile">
         <h2 class="visually-hidden">Добавления профиля</h2>
@@ -194,14 +196,14 @@
         <p class="feedback__text">
           Зарегистрируйтесь, это быстро и бесплатно!
           Уже зарегистрированы? Тогда скорее
-          <span class="feedback__sign-in">Авторизуйтесь</span>.
+          <a href="#" class="feedback__sign-in">Авторизуйтесь</a>.
         </p>
         <input type="email" class="feedback__email" placeholder="E-mail">
         <p class="feedback__text">
           Остались вопросы? Мы с радостью на них ответим!
         </p>
         <ul class="feedback__contacts contacts-list">
-          <li class="contacts-list__item">
+          <li class="contacts-list__item contacts-list__item--feedback">
             <a href="tel:+88005558628" class="contacts-list__tel contacts-list__tel--feedback">
               8 800 555-86-28
             </a>
@@ -217,7 +219,7 @@
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="address__area">
           <h3 class="address__title">Ул. Большая Конюшенная, 19/8</h3>
-          <a href="#" class="address__rout">Проложить маршрут</a>
+          <a href="#" class="address__rout button-index">Проложить маршрут</a>
         </div>
         <div class="address__map">
         </div>

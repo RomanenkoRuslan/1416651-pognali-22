@@ -1,0 +1,36 @@
+.promo {
+  background-color: @basic-blue;
+  color: @white;
+}
+
+.promo__blockquote {
+  .section-text();
+}
+
+.promo__author {
+  .section-slogan();
+}
+
+.promo__advice {
+  width: 270px;
+  height: 80px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  &:first-child {
+    background-color: @special-orange;
+  }
+
+  &:nth-child(2) {
+    background-color: @special-orange-light;
+  }
+
+  &:nth-child(3) {
+    background-color: @special-yellow-dark;
+  }
+
+  &:last-child {
+    background-color: @basic-yellow;
+  }
+}

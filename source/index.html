@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css\style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -83,11 +84,13 @@
         </p>
       </section>
       <section class="direction">
-        <h2 class="direction__title">Направления</h2>
-        <p class="direction__text section-text">
-          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
-          куда хотели бы отправиться и чем можно там заняться.
-        </p>
+        <div class="direction__description">
+          <h2 class="direction__title">Направления</h2>
+          <p class="direction__text section-text">
+            Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+            куда хотели бы отправиться и чем можно там заняться.
+          </p>
+        </div>
         <ul class="direction__list">
           <li class="direction__item">
             <h3 class="direction__country">Таиланд</h3>
@@ -108,14 +111,16 @@
         <a href="#" class="direction__more button-index">Показать все</a>
       </section>
       <section class="fellow-travelers">
-        <h2 class="fellow-travelers__title">Попутчики</h2>
-        <p class="fellow-travelers__text">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="fellow-travelers__slogan">
-          Теперь можно легко найти единомышленников!
-        </p>
+        <div class="fellow-travelers__description">
+          <h2 class="fellow-travelers__title">Попутчики</h2>
+          <p class="fellow-travelers__text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="fellow-travelers__slogan">
+            Теперь можно легко найти единомышленников!
+          </p>
+        </div>
         <ul class="fellow-travelers__list">
           <li class="fellow-travelers__item">
             <p class="fellow-travelers__level">
@@ -148,8 +153,8 @@
               <span class="fellow-travelers__level-number">80</span>level
             </p>
             <ul class="fellow-travelers__country-list">
-              <li class="fellow-travelers__country-item visually-hidden">Бельгия</li>
-              <li class="fellow-travelers__country-item visually-hidden">Чехия</li>
+              <li class="fellow-travelers__country-item fellow-travelers--belgium visually-hidden">Бельгия</li>
+              <li class="fellow-travelers__country-item fellow-travelers--czech visually-hidden">Чехия</li>
             </ul>
             <h3 class="fellow-travelers__user-name">Петя Демин</h3>
             <p class="fellow-travelers__hobbies">#бургер #бар #футбол #концерт #крафт</p>

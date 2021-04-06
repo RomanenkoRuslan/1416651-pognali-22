@@ -41,3 +41,31 @@
 .my-plans__list {
   .list-rules();
 }
+
+@media (min-width: @tablet-width) {
+  .my-plans__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+  }
+
+  .my-plans__title-direction {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .my-plans__item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    justify-content: space-around;
+  }
+
+  .my-plans__title-direction {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}

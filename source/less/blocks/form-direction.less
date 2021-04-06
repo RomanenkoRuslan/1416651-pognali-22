@@ -2,12 +2,20 @@
   background-color: @background-form-direction;
 }
 
+.form-direction__center {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+
 .form-direction__title {
   color: @white;
   background-color: @basic-blue-dark;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .form-direction__button {
@@ -18,6 +26,13 @@
   line-height: 18px;
   text-align: center;
   color: @basic-blue;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.form-direction__group {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .form-direction__title-group {
@@ -38,4 +53,84 @@
 
 .form-direction__ways-travel {
   .list-rules();
+}
+
+@media (min-width: @tablet-width) {
+  .form-direction__center {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .form-direction__title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .form-direction__level {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .form-direction__group {
+    &--ways-travel {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    &--hobbies {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+  }
+
+  .form-direction__button {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-direction__center {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .form-direction__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .form-direction__level {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+  }
+
+  .form-direction__img {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: center;
+  }
+
+  .form-direction__group {
+    &--ways-travel {
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    &--hobbies {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
 }

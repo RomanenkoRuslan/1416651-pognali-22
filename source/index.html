@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css\style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header center">
       <a class="page-header__logo">
         <img src="https://via.placeholder.com/150x150" alt="Логотип сайта">
       </a>
@@ -56,7 +57,7 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Сайт о путешествии с попутчиками</h1>
-      <section class="promo">
+      <section class="promo center">
         <h2 class="visually-hidden">Советы для путешественников</h2>
         <blockquote class="promo__blockquote">
           «Лучшее приложение, что я видел в жизни!»
@@ -71,7 +72,7 @@
           <li class="promo__advice">Путешествуйте вместе!</li>
         </ol>
       </section>
-      <section class="about-service">
+      <section class="about-service center">
         <h2 class="about-service__title">О сервисе</h2>
         <p class="about-service__text">
           Любое путешествие веселее с попутчиками,
@@ -82,12 +83,14 @@
           А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
         </p>
       </section>
-      <section class="direction">
-        <h2 class="direction__title">Направления</h2>
-        <p class="direction__text section-text">
-          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
-          куда хотели бы отправиться и чем можно там заняться.
-        </p>
+      <section class="direction center">
+        <div class="direction__description">
+          <h2 class="direction__title">Направления</h2>
+          <p class="direction__text section-text">
+            Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+            куда хотели бы отправиться и чем можно там заняться.
+          </p>
+        </div>
         <ul class="direction__list">
           <li class="direction__item">
             <h3 class="direction__country">Таиланд</h3>
@@ -107,15 +110,17 @@
         </ul>
         <a href="#" class="direction__more button-index">Показать все</a>
       </section>
-      <section class="fellow-travelers">
-        <h2 class="fellow-travelers__title">Попутчики</h2>
-        <p class="fellow-travelers__text">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="fellow-travelers__slogan">
-          Теперь можно легко найти единомышленников!
-        </p>
+      <section class="fellow-travelers center">
+        <div class="fellow-travelers__description">
+          <h2 class="fellow-travelers__title">Попутчики</h2>
+          <p class="fellow-travelers__text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="fellow-travelers__slogan">
+            Теперь можно легко найти единомышленников!
+          </p>
+        </div>
         <ul class="fellow-travelers__list">
           <li class="fellow-travelers__item">
             <p class="fellow-travelers__level">
@@ -148,8 +153,8 @@
               <span class="fellow-travelers__level-number">80</span>level
             </p>
             <ul class="fellow-travelers__country-list">
-              <li class="fellow-travelers__country-item visually-hidden">Бельгия</li>
-              <li class="fellow-travelers__country-item visually-hidden">Чехия</li>
+              <li class="fellow-travelers__country-item fellow-travelers--belgium visually-hidden">Бельгия</li>
+              <li class="fellow-travelers__country-item fellow-travelers--czech visually-hidden">Чехия</li>
             </ul>
             <h3 class="fellow-travelers__user-name">Петя Демин</h3>
             <p class="fellow-travelers__hobbies">#бургер #бар #футбол #концерт #крафт</p>
@@ -171,7 +176,7 @@
         </ul>
         <a href="#" class="fellow-travelers__more button-index">Показать все</a>
       </section>
-      <section class="add-profile">
+      <section class="add-profile center">
         <h2 class="visually-hidden">Добавления профиля</h2>
         <p class="add-profile__text">Добавьте свой профиль</p>
         <dl class="add-profile__tariffs">
@@ -190,7 +195,7 @@
         </dl>
         <a href="#" class="add-profile__business">Показать тарифы для бизнеса</a>
       </section>
-      <section class="feedback">
+      <section class="feedback center">
         <h2 class="visually-hidden">Обратная связь</h2>
         <h3 class="feedback__title">Заинтересовались?</h3>
         <p class="feedback__text">
@@ -215,7 +220,7 @@
           </li>
         </ul>
       </section>
-      <section class="address">
+      <section class="address center">
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="address__area">
           <h3 class="address__title">Ул. Большая Конюшенная, 19/8</h3>
@@ -225,7 +230,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer center">
       <a class="page-footer__logo">
         <img src="https://via.placeholder.com/150x150" alt="Логотип сайта">
       </a>

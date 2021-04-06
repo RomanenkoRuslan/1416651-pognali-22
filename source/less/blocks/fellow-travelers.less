@@ -34,3 +34,37 @@
   text-align: center;
   color: @special-grey;
 }
+
+.fellow-travelers__list {
+  .list-rules();
+}
+
+.fellow-travelers__country-list {
+  .list-rules();
+}
+
+
+@media (min-width: @tablet-width) {
+  .fellow-travelers__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fellow-travelers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .fellow-travelers__list {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+
+  .fellow-travelers__more {
+    width: 120px;
+  }
+}

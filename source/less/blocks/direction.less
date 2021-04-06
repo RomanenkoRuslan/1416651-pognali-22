@@ -17,6 +17,7 @@
 .direction__subtitle {
   font-size: 16px;
   line-height: 18px;
+  order: 5;
   color: @direction-subtitle;
 }
 
@@ -24,4 +25,48 @@
   font-size: 16px;
   line-height: 20px;
   color: @direction-subtitle;
+}
+
+.direction__item {
+  display: flex;
+  width: 220px;
+  flex-wrap: wrap;
+}
+
+.direction__list {
+  .list-rules();
+}
+
+@media (min-width: @tablet-width) {
+  .direction__subtitle {
+    order: 0;
+  }
+
+  .direction__item {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .direction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .direction__list {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .direction__description {
+    grid-column-start: 2;
+  }
+
+  .direction__more {
+    grid-column-start: 2;
+    width: 120px;
+  }
 }

@@ -34,3 +34,22 @@
     background-color: @basic-yellow;
   }
 }
+
+.promo__advice-list {
+  .list-rules();
+}
+
+@media (min-width: @tablet-width) {
+  .promo__advice-list {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__advice-list {
+    width: 1100px;
+  }
+}

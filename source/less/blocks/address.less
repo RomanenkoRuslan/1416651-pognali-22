@@ -1,15 +1,149 @@
-.address__area {
+.address {
   background-color: @basic-yellow;
   color: @basic-blue-light;
-  margin-bottom: 30px;
+  padding-top: 40px;
+  position: relative;
 }
 
 .address__rout {
-  border: 2px solid @basic-blue-light;
+  border: 3px solid @basic-blue-light;
+  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-left: 19px;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.address__rout::before {
+  content: url("../img/polygon.svg");
+  position: relative;
+  margin-right: 10px;
+}
+
+.address__rout::after {
+  content: url("../img/icon_location.svg");
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 50%;
+  background-color: @background-svg;
+  margin-right: 20px;
+  position: absolute;
+  top: -80px;
+  left: -3px;
 }
 
 .address__title {
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  width: 200px;
+  margin-left: 61px;
+  margin-top: 21px;
+  margin-bottom: 33px;
+}
+
+.address__title::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-color: @basic-blue-dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 35px 35px;
+}
+
+.address__title::before {
+  content: "";
+  width: 100%;
+  height: 35px;
+  background-color: @basic-yellow;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  border-radius: 0 0 35px 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .address__title::after {
+    height: 60px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .address__title::before {
+    height: 58px;
+    border-radius: 0 0 55px 55px;
+    bottom: -55px;
+  }
+
+  .address__title {
+    font-size: 28px;
+    line-height: 28px;
+    width: auto;
+    margin-top: 85px;
+    margin-left: 129px;
+    padding-top: 2px;
+  }
+
+  .address__area {
+    padding-bottom: 30px;
+  }
+
+  .address__rout {
+    width: 567px;
+    margin-top: 65px;
+    margin-left: 35px;
+    padding-top: 24px;
+    padding-left: 35px;
+    padding-bottom: 26px;
+
+    &::after {
+      padding: 0;
+      left: -406px;
+      top: -115px;
+      width: 68px;
+      height: 43px;
+      padding-top: 25px;
+    }
+
+    &::before {
+      margin-right: 22px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__rout {
+    width: 275px;
+    margin-left: 145px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+
+    &::after {
+      top: -8px;
+      left: -755px;
+      width: 90px;
+      height: 60px;
+      padding-top: 30px;
+    }
+  }
+
+  .address__area {
+    display: flex;
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+
+  .address__title {
+    margin-left: 345px;
+
+    &::before {
+      height: 58px;
+      border-radius: 0 0 55px 55px;
+      bottom: -50px;
+    }
+  }
 }

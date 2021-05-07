@@ -1,0 +1,40 @@
+.ways-travel {
+  display: flex;
+  margin-left: 35px;
+  padding-bottom: 18px;
+}
+
+.ways-travel__item {
+  opacity: 0.3;
+  margin-right: 13px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+
+  &--plane {
+    content: url("../img/icon_plane.svg");
+  }
+
+  &--bus {
+    content: url("../img/icon_bus.svg");
+  }
+
+  &--bicycle {
+    content: url("../img/icon_bicycle.svg");
+    opacity: 1;
+  }
+
+  &--run {
+    content: url("../img/icon_run.svg");
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}

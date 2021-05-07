@@ -1,72 +1,262 @@
+.direction {
+  background-color: @background-form-direction;
+  padding-top: 68px;
+  position: relative;
+}
+
 .direction__text {
   .section-text();
   color: @special-grey;
+  width: 216px;
+  padding-left: 25px;
 }
 
 .direction__title {
+  margin-top: 0;
   .section-title();
+  padding-left: 25px;
 }
 
 .direction__country {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
   color: @black;
+  align-items: flex-start;
+
+  &--thailand::before {
+    content: url("../img/flag-thailand-mobile.jpg");
+    position: absolute;
+    top: -15px;
+    width: 35px;
+    height: 24px;
+  }
+
+  &--france::before {
+    content: url("../img/flag-france-mobile.jpg");
+    position: absolute;
+    top: -15px;
+  }
+
+  &--czech::before {
+    content: url("../img/flag-czech-mobile.jpg");
+    position: absolute;
+    top: -15px;
+  }
 }
 
 .direction__subtitle {
+  width: 150px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 16px;
   line-height: 18px;
+  font-weight: bold;
   order: 5;
   color: @direction-subtitle;
+  opacity: 0.3;
+
+  &--czech {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
 }
 
 .direction__people {
   font-size: 16px;
   line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3px;
+  margin-right: 24px;
   color: @direction-subtitle;
+  position: relative;
+}
+
+.direction__people::before {
+  content: url("../img/icon_user.svg");
+  position: absolute;
+  left: -20px;
 }
 
 .direction__item {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.direction__info {
   display: flex;
-  width: 220px;
+  column-gap: 50px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: @white;
+  border-radius: 10px;
+  padding-left: 24px;
+  padding-top: 23px;
+  position: relative;
+  top: -14px;
 }
 
 .direction__list {
   .list-rules();
+  margin-top: 65px;
+}
+
+.direction__img {
+  border-radius: 10px 10px 0 0;
+}
+
+.direction__more {
+  display: flex;
+  margin-top: 10px;
 }
 
 @media (min-width: @tablet-width) {
   .direction__subtitle {
+    width: 200px;
     order: 0;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+  .direction__info {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 20px 0 0 20px;
+    top: 0;
+    padding-left: 31px;
+    padding-top: 28px;
+    justify-content: flex-start;
+  }
+
+  .direction__title {
+    .section-title-tablet();
+  }
+
+  .direction__text {
+    .section-text-tablet();
+    width: 400px;
+    margin-top: 61px;
+  }
+
+  .direction {
+    margin-left: 10px;
   }
 
   .direction__item {
-    flex-wrap: nowrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 140px;
+    margin-bottom: 11px;
+    margin-right: 15px;
+  }
+
+  .direction__img {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    width: 187px;
+  }
+
+  .direction__list {
+    margin-top: 110px;
+    margin-left: 30px;
+  }
+
+  .direction__country {
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      top: 30px;
+      right: -20px;
+    }
+  }
+
+  .direction__people {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 17px;
+    margin-left: 29px;
+
+    &--czech {
+      margin-top: 0;
+    }
+  }
+
+  .direction__more {
+    margin-top: 45px;
+    margin-left: 26px;
+    margin-right: 44px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .direction {
+  .direction__center {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
+    padding-top: 93px;
   }
 
   .direction__list {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
+    margin-top: 0;
   }
 
   .direction__description {
     grid-column-start: 2;
+    margin-left: 105px;
   }
 
   .direction__more {
     grid-column-start: 2;
-    width: 120px;
+    margin-left: 135px;
+  }
+
+  .direction__title {
+    margin-bottom: 0;
+  }
+
+  .direction__text {
+    line-height: 34px;
+    margin-top: 60px;
+  }
+
+  .direction__info {
+    padding-top: 22px;
+    margin-left: 32px;
+  }
+
+  .direction__item {
+    margin-right: 25px;
+    z-index: 0;
+
+    &:last-child::after {
+      content: url("../img/fade.png");
+      z-index: 5;
+      position: absolute;
+      left: 33px;
+      top: 60px;
+    }
+  }
+
+  .direction__people {
+    margin-top: 22px;
+    margin-left: 32px;
   }
 }

@@ -1,3 +1,23 @@
+.page-footer {
+  padding-top: 10px;
+  position: relative;
+}
+
+.page-footer__logo {
+  margin-left: 87px;
+}
+
+.page-footer__logo::after {
+  content: "";
+  width: 100%;
+  height: 35px;
+  background-color: @white;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  border-radius: 35px 35px 0 0;
+}
+
 .page-footer__text {
   font-size: 16px;
   line-height: 16px;
@@ -8,11 +28,76 @@
   display: flex;
   flex-direction: row;
   .list-rules();
+  margin-top: 35px;
+  margin-left: 68px;
+}
+
+.page-footer__copy {
+  margin-top: 36px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 276px;
+  border-top: 1px solid @border-item-add-plan;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__img {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer__center {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo::after {
+    height: 48px;
+    top: -47px;
+    border-radius: 48px 48px 0 0;
+  }
+
+  .page-footer__logo {
+    margin-left: 0;
+  }
+
+  .page-footer__socials {
+    margin: 0;
+    margin-left: 60px;
+  }
+
+  .page-footer__copy {
+    margin-top: 0;
+    padding-top: 0;
+    width: auto;
+    border: none;
+  }
+
+  .page-footer {
+    padding-top: 0;
+  }
+
+  .page-footer__text {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .page-footer__logo-academy {
+    position: relative;
+    right: -7px;
   }
 }

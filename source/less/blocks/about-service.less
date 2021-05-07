@@ -1,17 +1,102 @@
 .about-service {
   background-color: @basic-blue;
+  background-image: url("../img/about-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 28px;
+  padding-left: 45px;
+  padding-bottom: 73px;
+  font-family: "Blogger Sans", sans-serif;
+  border-radius: 0 0 20px 20px;
 }
 
 .about-service__title {
+  margin-top: 0;
   .section-title();
 }
 
 .about-service__text {
+  width: 211px;
   .section-text();
   color: @white;
 }
 
 .about-service__slogan {
+  width: 202px;
+  margin-top: 20px;
   .section-slogan();
   color: @white;
+}
+
+.about-service__more {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .about-service {
+    padding-top: 120px;
+    padding-left: 35px;
+    padding-bottom: 90px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about-service__title {
+    .section-title-tablet();
+  }
+
+  .about-service__text {
+    .section-text-tablet();
+    width: 300px;
+    padding-top: 5px;
+  }
+
+  .about-service__slogan {
+    .section-slogan-tablet();
+    width: 265px;
+    padding-top: 11px;
+  }
+
+  .about-service__more {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    margin-top: 53px;
+    border-radius: 20px;
+    padding-left: 34px;
+    padding-top: 27px;
+    padding-bottom: 29px;
+    padding-right: 23px;
+    position: relative;
+
+    &::after {
+      content: url("../img/polygon.svg");
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-service {
+    padding-top: 152px;
+    padding-left: 70px;
+    padding-bottom: 163px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .about-service__text {
+    padding-top: 22px;
+    width: 620px;
+    line-height: 35px;
+  }
+
+  .about-service__slogan {
+    padding-top: 9px;
+    width: 425px;
+  }
+
+  .about-service__more {
+    margin-top: 86px;
+  }
 }

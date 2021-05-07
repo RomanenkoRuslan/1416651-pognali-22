@@ -1,9 +1,13 @@
 .add-profile {
   background-color: @background-add-profile;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 
 .add-profile__text {
   .section-title();
+  margin-top: 0;
+  width: 100px;
 }
 
 .add-profile__tariffs {
@@ -11,6 +15,44 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
+  margin-top: 20px;
+}
+
+.add-profile__tariff-item {
+  margin-bottom: 16px;
+  min-width: 200px;
+  border-top: 1px solid @border-item-add-plan;
+  padding-top: 9px;
+}
+
+.add-profile__tariff {
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.add-profile__tariff::after {
+  content: "1";
+  text-align: center;
+  color: @white;
+  padding-top: 8px;
+  width: 34px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: @special-orange;
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  left: 210px;
+}
+
+.add-profile__tariff--second::after {
+  content: "2";
+  background-color: @special-yellow-dark;
+}
+
+.add-profile__tariff--third::after {
+  content: "3";
+  background-color: @basic-yellow;
 }
 
 .add-profile__price {
@@ -20,10 +62,162 @@
 .add-profile__business {
   text-decoration: none;
   color: @link-add-profile;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.add-profile__center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.add-profile__img {
+  margin-right: 25px;
+  position: relative;
+  top: -12px;
 }
 
 @media (min-width: @tablet-width) {
+  .add-profile {
+    padding-top: 70px;
+    padding-left: 89px;
+  }
+
   .add-profile__tariff-item {
     display: flex;
+    justify-content: space-between;
+    width: 565px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 21px;
+    border-top: 1px solid @border-item-add-plan;
+  }
+
+  .add-profile__center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .add-profile__tariffs {
+    margin-top: 40px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .add-profile__text {
+    .section-title-tablet();
+    margin-left: 15px;
+    width: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .add-profile__business {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 34px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+    margin-bottom: 0;
+
+    &::before {
+      content: url("../img/icon_businessman.svg");
+      position: absolute;
+      background-color: @background-filter-country;
+      width: 68px;
+      height: 52px;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 16px;
+      top: -20px;
+      left: -90px;
+    }
+  }
+
+  .add-profile__img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    z-index: 3;
+    margin-top: 8px;
+  }
+
+  .add-profile__tariff::after {
+    left: -90px;
+    padding: 20px 19px 22px;
+    top: -20px;
+  }
+
+  .add-profile__price {
+    background-color: @background-filter-country;
+    z-index: 1;
+
+    &--first {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 198px;
+        height: 285px;
+        background-color: @background-filter-country;
+        display: block;
+        position: absolute;
+        top: -60px;
+        left: -43px;
+        z-index: -1;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-profile {
+    padding-top: 102px;
+    padding-left: 161px;
+    padding-bottom: 4px;
+  }
+
+  .add-profile__img {
+    justify-self: start;
+    top: -228px;
+    left: 228px;
+    width: 198px;
+  }
+
+  .add-profile__text {
+    margin-left: 260px;
+  }
+
+  .add-profile__tariffs {
+    margin-top: 100px;
+  }
+
+  .add-profile__tariff-item {
+    width: 814px;
+  }
+
+  .add-profile__price {
+    &--first {
+      &::before {
+        content: "";
+        width: 446px;
+        height: 300px;
+        background-color: @background-filter-country;
+        display: block;
+        position: absolute;
+        top: -68px;
+        left: -168px;
+        z-index: -1;
+        border-radius: 20px;
+      }
+    }
   }
 }

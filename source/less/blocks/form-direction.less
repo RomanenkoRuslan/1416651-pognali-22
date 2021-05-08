@@ -1,5 +1,6 @@
 .form-direction {
   background-color: @background-form-direction;
+  padding-top: 20px;
 }
 
 .form-direction__center {
@@ -8,31 +9,35 @@
   grid-template-rows: repeat(5, auto);
 }
 
-.form-direction__title {
-  color: @white;
-  background-color: @basic-blue-dark;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 36px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
 .form-direction__button {
   background-color: @background-my-plans;
   text-transform: uppercase;
-  font-weight: 500;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 20px;
   line-height: 18px;
   text-align: center;
   color: @basic-blue;
   grid-column-start: 1;
   grid-column-end: 3;
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  border-radius: 20px;
+  font-family: "Blogger Sans", sans-serif;
 }
 
 .form-direction__group {
   grid-column-start: 1;
   grid-column-end: 3;
+
+  &--hobbies {
+    margin-top: 24px;
+  }
+
+  &--ways-travel {
+    margin-top: 8px;
+  }
 }
 
 .form-direction__title-group {
@@ -42,6 +47,11 @@
   line-height: 18px;
   text-align: center;
   color: @basic-blue-light;
+  margin: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: @background-form-direction;
+  z-index: 10;
 }
 
 .form-direction__hobbies {
@@ -49,21 +59,54 @@
   line-height: 18px;
   color: @special-grey;
   opacity: 0.6;
+  border: 1px solid @border-item-add-plan;
+  padding-left: 24px;
+  padding-top: 25px;
+  padding-bottom: 26px;
+  margin: 0;
+  position: relative;
+  top: -9px;
+  border-radius: 10px;
+  z-index: 5;
 }
 
 .form-direction__ways-travel {
   .list-rules();
+  padding-left: 69px;
+  border: 1px solid @border-item-add-plan;
+  position: relative;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  top: -10px;
+  margin-bottom: 4px;
+}
+
+.form-direction__img {
+  border-radius: 50%;
+  width: 100px;
+  justify-self: center;
+}
+
+.form-direction__level {
+  margin-top: 0;
+  margin-bottom: 14px;
+  justify-self: center;
+}
+
+.form-direction__ways-travel__item {
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
+  .form-direction {
+    padding-top: 65px;
+    padding-bottom: 29px;
+  }
+
   .form-direction__center {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(3, auto);
-  }
-
-  .form-direction__title {
-    grid-column-start: 1;
-    grid-column-end: 5;
   }
 
   .form-direction__level {
@@ -75,8 +118,11 @@
     &--ways-travel {
       grid-column-start: 2;
       grid-column-end: 4;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin-top: 0;
+      width: 308px;
+      margin-left: 16px;
     }
 
     &--hobbies {
@@ -84,12 +130,61 @@
       grid-column-end: 5;
       grid-row-start: 4;
       grid-row-end: 5;
+      margin-left: 35px;
+      margin-right: 35px;
+      margin-top: 41px;
     }
   }
 
   .form-direction__button {
     grid-column-start: 1;
     grid-column-end: 5;
+    margin-top: 27px;
+    letter-spacing: 0.09em;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    border-radius: 10px;
+  }
+
+  .form-direction__img {
+    border-radius: 10px;
+    width: 95px;
+    margin-left: 7px;
+  }
+
+  .form-direction__mark {
+    width: 95px;
+    margin-right: 10px;
+  }
+
+  .form-direction__title-group {
+    position: relative;
+    top: 84px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    margin: 0 auto;
+    width: 140px;
+
+    &--hobbies {
+      top: 94px;
+    }
+  }
+
+  .form-direction__ways-travel {
+    top: -19px;
+    padding-top: 25px;
+    padding-bottom: 27px;
+  }
+
+  .form-direction__hobbies {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 33px;
+    padding-left: 38px;
+    padding-bottom: 38px;
   }
 }
 
@@ -97,25 +192,29 @@
   .form-direction__center {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
-  }
-
-  .form-direction__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    position: relative;
   }
 
   .form-direction__level {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: end;
+    position: absolute;
+    top: -215px;
+    left: 895px;
+    width: 200px;
+  }
+
+  .form-direction__mark {
+    content: url("../img/mark-80.png");
   }
 
   .form-direction__img {
     grid-column-start: 4;
     grid-column-end: 5;
     justify-self: center;
+    position: absolute;
+    top: -255px;
+    left: 108px;
+    width: 190px;
+    border-radius: 10px 10px 0 0;
   }
 
   .form-direction__group {
@@ -124,6 +223,13 @@
       grid-column-end: 5;
       grid-row-start: 2;
       grid-row-end: 3;
+      width: 384px;
+      margin-top: 8px;
+
+      .form-direction__title-group {
+        margin-left: 112px;
+        width: 150px;
+      }
     }
 
     &--hobbies {
@@ -131,6 +237,33 @@
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
+      margin-top: 0;
+      margin-left: 65px;
+      width: 730px;
     }
+  }
+
+  .form-direction__ways-travel {
+    padding-left: 108px;
+    padding-top: 24px;
+  }
+
+  .form-direction__button {
+    width: 190px;
+    position: absolute;
+    top: -90px;
+    left: 1000px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .form-direction__word {
+    display: none;
+  }
+
+  .form-direction__title-group {
+    margin-left: 27px;
+    width: 60px;
   }
 }

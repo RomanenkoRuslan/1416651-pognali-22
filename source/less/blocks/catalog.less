@@ -13,3 +13,122 @@
 .catalog__pages {
   .list-rules();
 }
+
+.catalog__pagination {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__pagination {
+    display: block;
+  }
+
+  .catalog__pages {
+    display: flex;
+    gap: 20px;
+  }
+
+  .catalog__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 30px 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .catalog__want-visit-area {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .catalog__want-visit {
+    display: flex;
+  }
+
+  .catalog__avatar {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .catalog__title {
+    &--level {
+      display: none;
+    }
+
+    &--ways-travel {
+      display: none;
+    }
+  }
+
+  .catalog__level {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .catalog__text {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .catalog__call {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .catalog__like {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .catalog__ways-travel {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__title {
+    &--want-visit {
+      display: none;
+    }
+  }
+
+  .catalog__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 30px 1fr 30px;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .catalog__want-visit-area {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
+  .catalog__want-visit {
+    flex-direction: column;
+  }
+
+  .catalog__level {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+
+  .catalog__ways-travel {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+}

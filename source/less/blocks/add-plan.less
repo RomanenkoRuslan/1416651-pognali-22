@@ -1,61 +1,216 @@
 .add-plan {
   background-color: @background-add-plan;
+  position: relative;
+  padding-bottom: 55px;
 }
 
 .add-plan__title {
   .section-title-form();
   font-weight: bold;
+  color: @basic-blue-light;
+  z-index: 5;
+  margin-top: 0;
+  margin-bottom: 11px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-color: @background-add-plan;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.add-plan__slider {
+  .list-rules();
+  display: flex;
+  gap: 16px;
+  margin-top: 11px;
+  margin-left: 37px;
+}
+
+.add-plan__center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-plan__slide {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: @basic-blue-light;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.add-plan__step {
+  background-color: @white;
+  border-radius: 10px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+
+  &--first {
+    padding-bottom: 23px;
+  }
+}
+
+.add-plan__title-step {
+  font-weight: bold;
   font-size: 20px;
   line-height: 20px;
   color: @basic-blue-light;
+  padding-top: 24px;
+  margin-bottom: 0;
+
+  &--second {
+    margin-top: 10px;
+    padding-top: 23px;
+  }
+
+  &--third {
+    margin-top: 10px;
+    padding-top: 21px;
+  }
 }
 
-.add-plan__first-step {
-  background-color: @white;
+.add-plan__field,
+.add-plan__country-field {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .add-plan__text {
   font-size: 16px;
   line-height: 22px;
   color: @special-grey;
+  margin-top: 17px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+
+  &--step-second {
+    margin-bottom: 18px;
+  }
 }
 
 .add-plan__title-counter {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 16px;
   line-height: 16px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: @basic-blue-light;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  margin-right: 9px;
 }
 
 .add-plan__title-measure {
   opacity: 0.3;
+  letter-spacing: 0.07em;
+  margin-right: 22px;
+
+  &--day {
+    margin-left: 36px;
+    margin-right: 0;
+  }
+}
+
+.add-plan__counter {
+  margin-top: 9px;
+  margin-right: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid @border-item-add-plan;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 14px;
+  color: @basic-blue-light;
+}
+
+.add-plan__details {
+  margin-top: 4px;
+
+  &--measure {
+    margin-top: 12px;
+  }
 }
 
 .add-plan__child {
   font-size: 15px;
   line-height: 15px;
   color: @basic-blue-light;
+  margin-top: 20px;
+}
+
+.add-plan__checkbox {
+  margin-right: 14px;
+}
+
+.add-plan__back,
+.add-plan__forward {
+  background-color: transparent;
+  border: none;
+  opacity: 0.3;
+  padding: 0;
+}
+
+.add-plan__forward {
+  transform: rotate(180deg);
+  position: relative;
+  top: -2px;
+}
+
+.add-plan__mounth-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  margin-right: 25px;
+  border-top: 1px solid @border-item-add-plan;
+  border-bottom: 1px solid @border-item-add-plan;
+  padding-top: 11px;
+  padding-bottom: 10px;
 }
 
 .add-plan__mounth {
-  .section-title-form();
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  margin-right: 7px;
 }
 
 .add-plan__date-table {
   border-collapse: collapse;
+  margin-top: 16px;
+  text-transform: uppercase;
+  width: 221px;
+  height: 218px;
 }
 
 .add-plan__item {
   font-size: 14px;
   line-height: 18px;
   color: @special-grey;
-  border: 1px solid black;
-  padding: 8px;
+  text-align: center;
+  border: 1px solid @border-item-add-plan;
 
   &--days-week {
     border: none;
+    font-weight: normal;
   }
 
   &--days-weekends {
@@ -79,15 +234,119 @@
   &--today {
     border: 2px solid @color-weekends;
   }
+
+  &--full {
+    display: none;
+  }
 }
 
 .add-plan__country {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.09em;
+  font-family: "Blogger Sans", sans-serif;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: @basic-blue-dark;
+  width: 168px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid @border-item-add-plan;
+  padding-right: 40px;
+  appearance: none;
+  background-image: url("../img/arrow-back.svg");
+  background-repeat: no-repeat;
+  background-position: 140px  center;
+
+  &--select {
+    width: 220px;
+    background-position: 192px  center;
+  }
+
+  &--add {
+    width: 222px;
+    background-position: 191px  center;
+    background-image: url("../img/icon_plus.svg");
+    background-color: @background-form-direction;
+  }
+}
+
+.add-plan__country-area {
+  position: relative;
+}
+
+.add-plan__flag {
+  content: "rfgdrfg";
+  width: 50px;
+  height: 40px;
+  background-image: url("../img/flag-czech-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  border-radius: 5px;
+  border: 1px solid @border-item-add-plan;
+
+  &--bosnia {
+    background-image: url("../img/bosnia-and-herzegovina.jpg");
+  }
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: @basic-blue-light;
+    display: block;
+    border-radius: 50%;
+    margin-top: 16px;
+    position: relative;
+    right: 6px;
+  }
+
+  &::after {
+    content: url("../img/direction.svg");
+    position: absolute;
+    top: 43px;
+    left: -6px;
+  }
+}
+
+.add-plan__round {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid @border-item-add-plan;
+  position: absolute;
+  top: 23px;
+  left: 163px;
+
+  &::after {
+    content: url("../img/direction.svg");
+    position: absolute;
+    top: 26px;
+    left: 0;
+  }
+
+  &--not::after {
+    display: none;
+  }
+}
+
+.add-plan__delete {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: -5px;
+  background-image: url("../img/button-delete.svg");
+  border: none;
+  border-radius: 50%;
+  left: 210px;
 }
 
 .add-plan__country-letter-a-list {
@@ -105,8 +364,29 @@
   color: @basic-blue-dark;
   background-color: @basic-yellow;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 5px 15px;
+  display: block;
+  margin-right: 25px;
+  text-align: center;
+
+  &--first {
+    margin-top: 22px;
+  }
+
+  &--second {
+    margin-top: 9px;
+  }
+
+  &--third {
+    margin-top: 17px;
+    margin-right: 18px;
+    padding: 5px 14px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    border: none;
+    font-family: "Blogger Sans", sans-serif;
+  }
 }
 
 
@@ -118,17 +398,65 @@
   text-transform: uppercase;
   color: @basic-blue-dark;
   text-decoration: none;
+  text-align: center;
+  margin-right: 25px;
+  margin-top: 14px;
+  margin-bottom: 11px;
 }
 
 .add-plan__comment-title {
   color: @basic-blue-dark;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  margin-top: 7px;
+  margin-left: 10px;
+  margin-bottom: 17px;
+  margin-right: 10px;
+
+  &--bosnia::before {
+    content: url("../img/line.svg");
+    position: absolute;
+    top: 14px;
+    left: -15px;
+  }
 }
 
-.add-plan__mounth-wrap {
+.add-plan__comment {
+  width: 192px;
+  height: 207px;
+  padding-left: 13px;
+  padding-top: 10px;
+  padding-right: 13px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  color: @black;
+  border: 1px solid @border-item-add-plan;
+  font-family: "Blogger Sans", sans-serif;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &--plan {
+    margin-bottom: 15px;
+    height: 208px;
+  }
+}
+
+.add-plan__country-wrap {
   display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.add-plan__comment-flag {
+  height: 24px;
+  width: 35px;
+  position: absolute;
+  left: 185px;
+  top: 4px;
 }
 
 .add-plan__steps {
@@ -157,14 +485,48 @@
   }
 }
 
+.add-plan__button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+
+  &--minus {
+    top: 40px;
+    left: 8px;
+  }
+
+  &--plus {
+    top: 44px;
+    right: 33px;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .add-plan__details-wrap {
+  .add-plan__details--wrap {
+    margin-top: 26px;
+    margin-right: 15px;
+    border-top: 1px solid @border-item-add-plan;
+  }
+
+  .add-plan__field {
     display: flex;
     flex-direction: column;
   }
 
   .add-plan__child {
     order: 3;
+    margin-top: 30px;
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+
+  .add-plan__checkbox {
+    margin-right: 27px;
   }
 
   .add-plan__details--measure {
@@ -173,6 +535,335 @@
 
   .add-plan__steps {
     flex-direction: row;
+    align-items: baseline;
+  }
+
+  .add-plan {
+    padding-top: 22px;
+    padding-left: 35px;
+  }
+
+  .add-plan__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 59px;
+    margin-top: 0;
+  }
+
+  .add-plan__slider {
+    margin-left: 290px;
+    margin-top: 16px;
+  }
+
+  .add-plan__slide {
+    width: 6px;
+    height: 6px;
+    margin-right: 14px;
+  }
+
+  .add-plan__step {
+    border-radius: 30px;
+    margin-right: 70px;
+    padding-top: 23px;
+    padding-left: 40px;
+
+    &--first {
+      padding-bottom: 56px;
+      margin-bottom: 39px;
+    }
+
+    &--second {
+      padding-left: 43px;
+      padding-bottom: 54px;
+      margin-bottom: 51px;
+    }
+
+    &--third {
+      padding-left: 43px;
+      padding-bottom: 54px;
+      margin-bottom: 55px;
+    }
+  }
+
+  .add-plan__title-step {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 0;
+  }
+
+  .add-plan__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+
+    &--step-second {
+      width: 440px;
+    }
+
+    &--step-third {
+      width: 500px;
+    }
+  }
+
+  .add-plan__title-counter {
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 26px;
+    margin-right: 0;
+  }
+
+  .add-plan__title-measure {
+    margin-left: 267px;
+
+    &--day {
+      margin-left: 315px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 40px;
+        height: 15px;
+        background: @day-box;
+        position: absolute;
+        top: 21px;
+        left: 33px;
+      }
+    }
+  }
+
+  .add-plan__counter {
+    margin-top: 26px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    padding-left: 7px;
+  }
+
+  .add-plan__button {
+    transform: scale(1.4);
+
+    &--minus {
+      top: 90px;
+      left: 20px;
+    }
+
+    &--plus {
+      top: 96px;
+      right: 45px;
+    }
+  }
+
+  .add-plan__mounth-wrap {
+    margin-top: 59px;
+    margin-right: 40px;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+  }
+
+  .add-plan__mounth {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .add-plan__back {
+    transform: scale(2);
+    position: relative;
+    top: 5px;
+    left: 3px;
+  }
+
+  .add-plan__forward {
+    transform: scale(2) rotate(180deg);
+    position: relative;
+  }
+
+  .add-plan__date-table {
+    width: 537px;
+    height: 450px;
+    margin-top: 29px;
+  }
+
+  .add-plan__item {
+    font-size: 18px;
+    line-height: 18px;
+
+    &--full {
+      display: inline-block;
+      text-transform: lowercase;
+    }
+
+    &--days-week {
+      height: 35px;
+    }
+  }
+
+  .add-plan__next-step {
+    text-transform: none;
+    margin-top: 48px;
+    width: 235px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 27px;
+    padding-left: 34px;
+    padding-bottom: 29px;
+    position: relative;
+    text-align: left;
+
+    &::after {
+      content: url("../img/polygon.svg");
+      position: absolute;
+      top: 25px;
+      right: 36px;
+    }
+
+    &--second {
+      margin-top: 43px;
+    }
+
+    &--third {
+      width: 286px;
+      margin-top: 43px;
+    }
+  }
+
+  .add-plan__country-area {
+    &--first {
+      border-top: 1px solid @border-item-add-plan;
+      margin-top: 18px;
+      padding-top: 36px;
+      width: 535px;
+    }
+  }
+
+  .add-plan__country {
+    width: 369px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    padding-top: 24px;
+    padding-left: 25px;
+    padding-bottom: 24px;
+    margin-bottom: 9px;
+    background-position: 325px;
+    background-size: 18px;
+  }
+
+  .add-plan__flag {
+    top: 62px;
+    right: 49px;
+    border: none;
+
+    &::before {
+      width: 13px;
+      height: 13px;
+      right: 47px;
+      top: -10px;
+      z-index: 10;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--czech {
+      top: 27px;
+      right: 90px;
+    }
+  }
+
+  .add-plan__delete {
+    top: 30px;
+    left: 513px;
+    background-image: url("../img/icon_close_point.svg");
+    background-color: transparent;
+    transform: scale(1.2);
+
+    &--bosnia {
+      top: 65px;
+    }
+  }
+
+  .add-plan__round {
+    width: 13px;
+    height: 13px;
+    left: 388px;
+    top: 32px;
+    background-color: @white;
+    z-index: 10;
+
+    &--not {
+      background-color: @background-form-direction;
+    }
+
+    &::after {
+      content: "";
+      height: 349px;
+      width: 1px;
+      background-color: @border-item-add-plan;
+      top: -240px;
+      left: 6px;
+      z-index: 5;
+    }
+  }
+
+  .add-plan__last-step {
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+    margin-left: 78px;
+    position: relative;
+
+    &::before {
+      content: url("../img/polygon.svg");
+      position: absolute;
+      left: -35px;
+      top: 2px;
+      margin-right: 22px;
+      transform: rotate(-180deg) scale(1.2);
+    }
+  }
+
+  .add-plan__comment-title {
+    font-size: 30px;
+    line-height: 30px;
+    border-top: 1px solid @border-item-add-plan;
+    width: 533px;
+    margin-left: 0;
+    margin-bottom: 40px;
+    margin-top: 19px;
+    padding-top: 34px;
+
+    &--czech {
+      border: none;
+      margin-top: 11px;
+    }
+
+    &--bosnia::before {
+      content: url("../img/line_country.svg");
+      top: 65px;
+      left: 520px;
+    }
+  }
+
+  .add-plan__comment {
+    width: 410px;
+    height: 122px;
+    margin-left: 3px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-left: 16px;
+    margin-bottom: 0;
+    padding-right: 70px;
+  }
+
+  .add-plan__comment-flag {
+    position: relative;
+    top: 60px;
+    left: -90px;
   }
 }
 
@@ -180,24 +871,296 @@
   .add-plan__title-counter {
     display: flex;
     flex-direction: row;
+    letter-spacing: 0;
+    align-items: center;
+
+    &--day {
+      padding-top: 0;
+    }
+  }
+
+  .add-plan__counter {
+    margin-top: 0;
+    width: 169px;
+    margin-left: 52px;
+    margin-right: 30px;
+  }
+
+  .add-plan__button {
+    &--minus {
+      top: 45px;
+      left: 240px;
+    }
+
+    &--plus {
+      top: 53px;
+      left: 360px;
+    }
+
+    &--second {
+      top: 28px;
+    }
+
+    &--second&--minus {
+      top: 23px;
+    }
   }
 
   .add-plan__title-measure {
     order: 3;
+    margin-left: 0;
+    margin-right: 94px;
+
+    &--day::after {
+      display: none;
+    }
   }
 
-  .add-plan__details-wrap {
+  .add-plan__details--wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-top: 0;
   }
 
   .add-plan__navigation-list {
     display: block;
+    margin-top: 29px;
+    margin-bottom: 0;
+    position: relative;
+    list-style: none;
+    left: -95px;
+  }
+
+  .add-plan__navigation-item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 14px;
+    }
+
+    &::before {
+      content: "";
+      background-color: @basic-blue-light;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      left: -43px;
+      top: 8px;
+    }
   }
 
   .add-plan__navigation {
     display: grid;
     grid-template-columns: 3fr 1fr;
+  }
+
+  .add-plan__title {
+    margin-left: 69px;
+    line-height: 0;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    z-index: 10;
+
+    &::before {
+      height: 60px;
+      top: -60px;
+      border-radius: 55px 55px 0 0;
+      z-index: -5;
+    }
+  }
+
+  .add-plan {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .add-plan__slider {
+    display: none;
+  }
+
+  .add-plan__step {
+    border-radius: 60px 60px 60px 60px;
+    padding-top: 76px;
+    padding-left: 159px;
+    padding-bottom: 106px;
+    margin-right: 0;
+    width: 1161px;
+    margin-bottom: 44px;
+
+    &--second {
+      padding-bottom: 104px;
+    }
+
+    &--third {
+      padding-bottom: 102px;
+      margin-bottom: 66px;
+    }
+  }
+
+  .add-plan__title-step {
+    &--second {
+      padding-top: 21px;
+    }
+  }
+
+  .add-plan__title-step-br {
+    display: none;
+  }
+
+  .add-plan__child {
+    justify-self: end;
+    margin-right: 143px;
+    margin-top: 34px;
+  }
+
+  .add-plan__mounth-wrap {
+    margin-top: 15px;
+    margin-right: 160px;
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+  .add-plan__date-table {
+    margin-top: 0;
+    width: 1000px;
+    height: 482px;
+  }
+
+  .add-plan__item {
+    text-align: left;
+    padding-left: 15px;
+    vertical-align: top;
+    padding-top: 12px;
+    position: relative;
+
+    &--days-week {
+      height: 38px;
+      padding-top: 16px;
+    }
+
+    &--day-first,
+    &--day-last {
+      &::after {
+        content: "Заезд";
+        text-transform: none;
+        position: absolute;
+        top: 40px;
+        left: 12px;
+      }
+    }
+
+    &--day-last {
+      &::after {
+        content: "Выезд";
+      }
+    }
+
+    &--today {
+      outline: 4px solid @color-weekends;
+      z-index: 10;
+      border: 2px solid @color-weekends;
+    }
+  }
+
+  .add-plan__next-step {
+    margin-top: 57px;
+
+    &--second {
+      margin-top: 51px;
+    }
+
+    &--third {
+      margin-top: 54px;
+    }
+  }
+
+  .add-plan__country-area {
+    &--first {
+      margin-top: 41px;
+      padding-top: 56px;
+      width: 1000px;
+    }
+  }
+
+  .add-plan__country {
+    width: 731px;
+    background-position: 685px;
+  }
+
+  .add-plan__round {
+    top: 31px;
+    left: 769px;
+
+    &::after {
+      left: 5px;
+      top: -260px;
+      height: 540px;
+    }
+  }
+
+  .add-plan__delete {
+    left: 974px;
+
+    &--bosnia {
+      top: 85px;
+    }
+  }
+
+  .add-plan__flag {
+    top: 26px;
+    left: 816px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+
+    &--bosnia {
+      top: 82px;
+    }
+  }
+
+  .add-plan__steps {
+    justify-content: space-between;
+    padding-right: 135px;
+  }
+
+  .add-plan__comment-title {
+    width: 1000px;
+    padding-top: 78px;
+
+    &--czech {
+      padding-top: 34px;
+    }
+
+    &--bosnia {
+      margin-top: 43px;
+
+      &::before {
+        left: 768px;
+        top: 132px;
+      }
+    }
+  }
+
+  .add-plan__comment {
+    padding-top: 23px;
+    padding-left: 22px;
+    width: 694px;
+    padding-right: 10px;
+    height: 115px;
+  }
+
+  .add-plan__comment-flag {
+    top: 110px;
+    left: -180px;
+
+    &--czech {
+      top: 55px;
+    }
   }
 }

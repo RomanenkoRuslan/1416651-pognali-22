@@ -2,4 +2,18 @@
   color: @basic-blue;
   font-weight: bold;
   font-family: "Blogger Sans", sans-serif;
+
+  &--form {
+    padding-bottom: 4px;
+    background-color: @basic-yellow;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    &--form {
+      padding-bottom: 0;
+      background-color: @background-form-direction;
+    }
+  }
 }

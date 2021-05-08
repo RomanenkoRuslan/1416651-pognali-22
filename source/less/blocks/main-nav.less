@@ -203,6 +203,23 @@
   .main-nav {
     padding-top: 27px;
 
+    &--form {
+      border-radius: 0 0 60px 60px;
+      padding-top: 10px;
+
+      .main-nav__center {
+        padding-top: 8px;
+      }
+
+      .main-nav__toggle {
+        top: 3px;
+      }
+
+      .main-nav__title {
+        margin-top: 110px;
+      }
+    }
+
     &--closed {
       .user-list__link--form {
         display: block;
@@ -211,6 +228,10 @@
 
       .main-nav__list-user-list {
         left: 0;
+
+        &--form {
+          top: -21px;
+        }
       }
     }
 
@@ -342,6 +363,27 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     padding-top: 0;
+
+    &--form {
+      .main-nav__center {
+        padding-top: 34px;
+      }
+
+      .main-nav__list-user-list--form {
+        top: -10px;
+      }
+
+      .main-nav__contacts--form {
+        top: 5px;
+        display: flex;
+      }
+
+      .main-nav__title {
+        margin-top: 111px;
+        margin-left: 64px;
+        margin-bottom: 1px;
+      }
+    }
   }
 
   .main-nav__toggle {

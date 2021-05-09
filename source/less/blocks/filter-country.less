@@ -17,6 +17,7 @@
   text-transform: uppercase;
   color: @white;
   text-decoration: none;
+  display: none;
 }
 
 .filter-country__title-section {
@@ -71,4 +72,38 @@
 
 .filter-country__letter-list {
   .list-rules();
+}
+
+.filter-country__desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-country__continents {
+    display: flex;
+  }
+
+  .filter-country__title-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-country__link {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-country__desktop {
+    display: block;
+  }
+
+  .filter-country__mobile {
+    display: none;
+  }
+
+  .filter-country__desktop-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

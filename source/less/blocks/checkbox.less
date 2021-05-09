@@ -1,0 +1,28 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__new {
+  border: 1px solid @checkbox-border;
+  border-radius: 4px;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox__input:checked + .checkbox__new {
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox__new {
+    transform: scale(1.4);
+  }
+}

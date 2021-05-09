@@ -1,29 +1,47 @@
 .my-plans {
   background-color: @background-my-plans;
+  border-radius: 20px;
+  padding-top: 6px;
+  margin-top: 20px;
+  padding-bottom: 48px;
 }
 
 .my-plans__title {
   .section-title-form();
+  margin-bottom: 31px;
+  margin-top: 22px;
 }
 
 .my-plans__card {
   background-color: @white;
   border-radius: 10px;
+  padding-top: 7px;
+  padding-left: 25px;
+  padding-bottom: 22px;
+  margin-bottom: 10px;
 }
 
 .my-plans__title-direction {
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
+  margin-bottom: 20px;
 }
 
-.my-plans__text {
+.my-plans__text,
+.my-plans__date {
   font-weight: 500;
   font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.06em;
+  line-height: 20px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: @basic-blue-light;
+  margin-bottom: 16px;
+}
+
+.my-plans__date {
+  margin-top: 5px;
+  margin-bottom: 21px;
 }
 
 .my-plans__change {
@@ -43,29 +61,117 @@
 }
 
 @media (min-width: @tablet-width) {
-  .my-plans__item {
+  .my-plans__card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     justify-content: space-around;
+    align-items: baseline;
+    margin-right: 69px;
+    padding-left: 40px;
+    padding-top: 14px;
+    padding-bottom: 0;
   }
 
   .my-plans__title-direction {
     grid-column-start: 1;
     grid-column-end: 4;
+    font-size: 24px;
+    line-height: 24px;
+    position: relative;
+    margin-bottom: 22px;
+  }
+
+  .my-plans {
+    border-radius: 30px;
+    padding-top: 24px;
+    padding-left: 34px;
+    padding-bottom: 95px;
+  }
+
+  .my-plans__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 51px;
+    margin-top: 32px;
+  }
+
+  .my-plans__num {
+    position: absolute;
+    right: 32px;
+    top: 3px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .my-plans__text,
+  .my-plans__date,
+  .my-plans__change {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    margin-top: 34px;
+    font-weight: bold;
+  }
+
+  .my-plans__date {
+    margin-bottom: 16px;
+    position: relative;
+    left: -15px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .my-plans__item {
+  .my-plans__card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     justify-content: space-around;
+    padding-top: 35px;
+    padding-left: 73px;
+    padding-bottom: 17px;
+    margin-bottom: 14px;
+    margin-right: 62px;
   }
 
   .my-plans__title-direction {
     grid-column-start: 1;
     grid-column-end: 4;
+    margin-top: 0;
+  }
+
+  .my-plans__num {
+    position: relative;
+    top: 0;
+  }
+
+  .my-plans {
+    border-radius: 55px;
+    padding-left: 64px;
+    padding-top: 20px;
+    padding-bottom: 110px;
+    margin-top: 13px;
+  }
+
+  .my-plans__title {
+    margin-left: 7px;
+    margin-bottom: 53px;
+  }
+
+  .my-plans__date {
+    margin-top: 0;
+    left: -55px;
+  }
+
+  .my-plans__text {
+    margin-top: 0;
+    position: relative;
+    left: -35px;
+  }
+
+  .my-plans__change {
+    margin-top: 0;
+    justify-self: end;
+    margin-right: 32px;
   }
 }

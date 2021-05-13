@@ -13,6 +13,14 @@
   display: block;
   width: 24px;
   height: 24px;
+
+  &--catalog {
+    width: 17px;
+    height: 18px;
+    border: none;
+    background-color: @white;
+    margin-right: 9px;
+  }
 }
 
 .checkbox__input:checked + .checkbox__new {
@@ -24,5 +32,9 @@
 @media (min-width: @tablet-width) {
   .checkbox__new {
     transform: scale(1.4);
+
+    &--catalog {
+      margin-right: 13px;
+    }
   }
 }

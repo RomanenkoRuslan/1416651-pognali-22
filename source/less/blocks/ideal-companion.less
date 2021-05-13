@@ -1,6 +1,13 @@
 .ideal-companion {
   background-color: @basic-yellow;
   border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+  margin-bottom: 27px;
+  width: 220px;
+  font-family: "Blogger Sans", sans-serif;
 }
 
 .ideal-companion__title {
@@ -9,6 +16,17 @@
   line-height: 22px;
   letter-spacing: 0.02em;
   color: @basic-blue-light;
+  margin-top: 0;
+}
+
+.ideal-companion__list {
+  .list-rules();
+  margin-top: 24px;
+  margin-left: 1.5px;
+}
+
+.ideal-companion__item {
+  position: relative;
 }
 
 .ideal-companion__item-title {
@@ -17,12 +35,38 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @basic-blue-light;
+  border-top: 1px solid @border-list;
+  padding-top: 11px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.ideal-companion__button-turn {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/polygon.svg");
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 18px;
+  right: 0;
+
+  &--opened {
+    transform: rotate(-90deg);
+    top: 10px;
+    right: -2px;
+  }
 }
 
 .ideal-companion__preference {
   font-size: 15px;
   line-height: 20px;
   color: @black;
+  margin-bottom: 10px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .ideal-companion__show {
@@ -34,28 +78,360 @@
   line-height: 17px;
   text-align: center;
   text-transform: uppercase;
-  padding: 13px 72px;
+  padding: 12px 77px;
+  padding-bottom: 10px;
   border-radius: 25px;
-}
-
-.ideal-companion__list {
-  .list-rules();
+  position: relative;
+  left: -5px;
+  top: 3px;
 }
 
 .ideal-companion__item-wrap {
   .list-rules();
   display: flex;
   flex-direction: column;
+  margin-top: 13px;
+
+  &--hobby,
+  &--food {
+    display: none;
+  }
+}
+
+.ideal-companion__ways-travel {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 21px;
+}
+
+.ideal-companion__filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.ideal-companion__range-filter {
+  width: 220px;
+  margin-top: 0;
+}
+
+.ideal-companion__range-controls {
+  position: relative;
+  margin-bottom: 36px;
+  padding-top: 24px;
+}
+
+.ideal-companion__scale {
+  height: 2px;
+  width: 100px;
+  background: @direction-subtitle;
+  z-index: -5;
+}
+
+.ideal-companion__bar {
+  width: 140px;
+  height: 2px;
+  background: @basic-blue-light;
+  z-index: 15;
+  opacity: 1;
+  left: 70px;
+  position: absolute;
+}
+
+.ideal-companion__toggle {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: @basic-blue-light;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ideal-companion__toggle--min {
+  left: 66px;
+}
+
+.ideal-companion__toggle--max {
+  left: 209px;
+}
+
+.ideal-companion__input {
+  width: 78px;
+  padding: 6px 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: center;
+  background: @white;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+  color: @basic-blue-light;
+  border: 1px solid @ideal-companion-input;
+
+  &--min-price {
+    border-right: none;
+  }
+
+  &--max-price {
+    border-left: none;
+  }
+}
+
+.ideal-companion__price-controls {
+  display: flex;
+  flex-direction: row;
+
+  &::after {
+    content: url("../img/border-level.svg");
+    position: absolute;
+    left: 100px;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .ideal-companion {
+    position: relative;
+    left: 10px;
+    width: 610px;
+    padding-top: 35px;
+    margin-bottom: 41px;
+  }
+
+  .ideal-companion__title {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.001em;
+  }
+
+  .ideal-companion__list {
+    border-top: 1px solid @border-list;
+    border-bottom: 1px solid @border-list;
+    margin-top: 39px;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    margin-bottom: 32px;
+  }
+
+  .ideal-companion__item-title {
+    border-top: none;
+    font-size: 20px;
+    line-height: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    &--level {
+      margin-top: 14px;
+    }
+  }
+
+  .ideal-companion__preference {
+    font-size: 20px;
+    line-height: 20px;
+    width: 144px;
+    margin-left: 24px;
+  }
+
+  .ideal-companion__button-turn {
+    display: none;
+  }
+
   .ideal-companion__item-wrap {
     flex-direction: row;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: end;
+
+    &--hobby,
+    &--food {
+      display: flex;
+    }
+  }
+
+  .ideal-companion__ways-travel {
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+
+  .ideal-companion__ways-travel-item {
+    margin-right: 3px;
+  }
+
+  .ideal-companion__range-filter {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .ideal-companion__input {
+    width: 53px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    padding-top: 9px;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  .ideal-companion__price-controls {
+    order: 15;
+    margin-left: 243px;
+
+    &::after {
+      left: 471px;
+      top: 6px;
+      transform: scale(1.25);
+    }
+  }
+
+  .ideal-companion__item {
+    display: grid;
+    grid-template-columns: repeat(1fr, 4fr);
+    align-items: baseline;
+
+    &--ways-travel,
+    &--level {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 5px;
+    }
+  }
+
+  .ideal-companion__scale {
+    height: 3px;
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  .ideal-companion__bar {
+    left: 110px;
+    width: 160px;
+    height: 3px;
+  }
+
+  .ideal-companion__toggle {
+    width: 14px;
+    height: 14px;
+
+    &--min {
+      top: -5px;
+      left: 100px;
+    }
+
+    &--max {
+      top: -5px;
+      left: 268px;
+    }
+  }
+
+  .ideal-companion__range-controls {
+    margin-left: 62px;
+    margin-top: 20px;
+    padding-top: 0;
+  }
+
+  .filter-country__continents {
+    display: flex;
+  }
+
+  .ideal-companion__show {
+    left: 0;
+    padding: 16px 355px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    display: block;
+    text-align: center;
+    padding-left: 262px;
+    margin-bottom: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .ideal-companion {
+    width: 270px;
+    order: 10;
+  }
+
+  .ideal-companion__item {
+    display: flex;
+    flex-direction: column;
+  }
+
   .ideal-companion__item-wrap {
     flex-direction: column;
+
+    &--hobby {
+      display: none;
+    }
+
+    &--food {
+      display: none;
+    }
+  }
+
+  .ideal-companion__button-turn {
+    display: block;
+  }
+
+  .ideal-companion__preference {
+    margin-left: 0;
+  }
+
+  .ideal-companion__ways-travel {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .ideal-companion__show {
+    width: 200px;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+
+  .ideal-companion__range-filter {
+    display: block;
+  }
+
+  .ideal-companion__price-controls {
+    margin-left: 0;
+  }
+
+  .ideal-companion__range-controls {
+    margin-left: 0;
+  }
+
+  .ideal-companion__scale {
+    height: 2px;
+    width: 100px;
+  }
+
+  .ideal-companion__bar {
+    width: 140px;
+    height: 2px;
+    left: 70px;
+  }
+
+  .ideal-companion__toggle {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+
+    &--min {
+      left: 66px;
+    }
+
+    &--max {
+      left: 209px;
+    }
   }
 }

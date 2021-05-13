@@ -1,9 +1,10 @@
 .alphabet {
   border-collapse: collapse;
+  width: 220px;
+  height: 205px;
 }
 
 .alphabet__cell {
-  padding: 12px 17px;
   color: @basic-blue-dark;
   font-weight: 500;
   font-size: 14px;
@@ -20,8 +21,31 @@
     background-color: @white;
   }
 
-  &--selected-filter-country {
+  &--selected {
     background-color: @basic-blue-light;
     color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .alphabet {
+    margin-top: 14px;
+    width: 385px;
+    height: 420px;
+  }
+
+  .alphabet__cell {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: @color-alphabet-cell;
+    opacity: 0.3;
+    background-color: @background-alphabet-cell;
+    border: none;
+
+    &--selected {
+      background-color: @background-alphabet-cell;
+      opacity: 1;
+    }
   }
 }

@@ -16,7 +16,6 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <h2 class="main-nav__slogan">В путешествие <br> с крутыми попутчиками!</h2>
           <ul class="main-nav__list main-nav__list-site-list site-list">
             <li class="site-list__item">
               <a href="#" class="site-list__link">О сервисе</a>
@@ -28,24 +27,22 @@
               <a href="catalog.html" class="site-list__link">Попутчики</a>
             </li>
           </ul>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__contacts contacts-list">
-              <li class="contacts-list__item">
-                <a href="tel:+88005558628" class="contacts-list__tel">
-                  <span class="contacts-list__svg-tel"></span>
-                  <span class="contacts-list__item-area">8 800 555-86-28</span>
-                </a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
-                  <span class="contacts-list__svg-email"></span>
-                  <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
-                </a>
-              </li>
-            </ul>
-            <div class="main-nav__list-user-list user-list">
-              <a href="#" class="user-list__link">Авторизация</a>
-            </div>
+          <ul class="main-nav__contacts contacts-list">
+            <li class="contacts-list__item">
+              <a href="tel:+88005558628" class="contacts-list__tel">
+                <span class="contacts-list__svg-tel"></span>
+                <span class="contacts-list__item-area">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts-list__item">
+              <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts-list__svg-email"></span>
+                <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <div class="main-nav__list-user-list user-list">
+            <a href="#" class="user-list__link">Авторизация</a>
           </div>
           <ul class="main-nav__socials socials">
             <li class="main-nav__socials-item socials__item socials__item--facebook">
@@ -66,14 +63,36 @@
       <h1 class="visually-hidden">Сайт о путешествии с попутчиками</h1>
       <section class="promo">
         <div class="promo__center center">
+          <h2 class="promo__slogan">В путешествие <br> с крутыми попутчиками!</h2>
+          <div class="promo__wrapper">
+            <ul class="promo__contacts contacts-list">
+              <li class="contacts-list__item">
+                <a href="tel:+88005558628" class="contacts-list__tel">
+                  <span class="contacts-list__svg-tel"></span>
+                  <span class="contacts-list__item-area">8 800 555-86-28</span>
+                </a>
+              </li>
+              <li class="contacts-list__item">
+                <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts-list__svg-email"></span>
+                  <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
+                </a>
+              </li>
+            </ul>
+            <div class="promo__user-list user-list">
+              <a href="#" class="user-list__link">Авторизация</a>
+            </div>
+          </div>
           <h2 class="visually-hidden">Советы для путешественников</h2>
-          <blockquote class="promo__blockquote">
-            «Лучшее приложение, что я видел в жизни!»
-          </blockquote>
-          <p class="promo__author">
-            Мурат Эльтазин <br>
-            главный редактор газеты «гаджетлайф»
-          </p>
+          <div class="promo__blockquote-wrap">
+            <blockquote class="promo__blockquote">
+              «Лучшее приложение, что я видел в жизни!»
+            </blockquote>
+            <p class="promo__author">
+              Мурат Эльтазин <br>
+              главный редактор газеты «гаджетлайф»
+            </p>
+          </div>
           <ol class="promo__advice-list">
             <li class="promo__advice">Выберите <br> направление <span class="promo__advice-num">1</span></li>
             <li class="promo__advice">Изучите идеи <br> путешественников <span class="promo__advice-num">2</span></li>
@@ -305,6 +324,30 @@
         </div>
       </div>
     </footer>
+    <section class="popup-business-rates">
+      <div class="popup-business-rates__center center">
+        <h3 class="popup-business-rates__title">Бизнес-тарифы</h3>
+        <dl class="popup-business-rates__list">
+          <div class="popup-business-rates__item">
+            <dt class="popup-business-rates__product">Реклама у блоггера</dt>
+            <dd class="popup-business-rates__price">300 000 руб./пост</dd>
+          </div>
+          <div class="popup-business-rates__item">
+            <dt class="popup-business-rates__product">Накрутка подписчиков</dt>
+            <dd class="popup-business-rates__price">от 1 руб./шт.</dd>
+          </div>
+          <div class="popup-business-rates__item">
+            <dt class="popup-business-rates__product">Лайки от ботов</dt>
+            <dd class="popup-business-rates__price">от 20 коп./лайк</dd>
+          </div>
+          <div class="popup-business-rates__item">
+            <dt class="popup-business-rates__product">Ваш продакт-плейсмент</dt>
+            <dd class="popup-business-rates__price">Индивидуально</dd>
+          </div>
+        </dl>
+      </div>
+      <button type="button" class="popup-business-rates__close">Закрыть окно</button>
+    </section>
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');

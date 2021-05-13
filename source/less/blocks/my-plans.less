@@ -65,21 +65,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    justify-content: space-around;
+    text-align: center;
     align-items: baseline;
     margin-right: 69px;
-    padding-left: 40px;
     padding-top: 14px;
     padding-bottom: 0;
+    padding-left: 0;
   }
 
   .my-plans__title-direction {
+    text-align: left;
     grid-column-start: 1;
     grid-column-end: 4;
     font-size: 24px;
     line-height: 24px;
     position: relative;
-    margin-bottom: 22px;
+    margin-bottom: 0;
+    padding-left: 40px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid @background-my-plans;
   }
 
   .my-plans {
@@ -110,7 +114,6 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.08em;
-    margin-top: 34px;
     font-weight: bold;
   }
 
@@ -135,6 +138,7 @@
   }
 
   .my-plans__title-direction {
+    border-bottom: none;
     grid-column-start: 1;
     grid-column-end: 4;
     margin-top: 0;

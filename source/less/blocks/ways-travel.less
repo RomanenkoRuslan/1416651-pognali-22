@@ -38,7 +38,8 @@
     opacity: 1;
   }
 
-  &--form {
+  &--form,
+  &--catalog {
     background-color: @white;
     border-radius: 50%;
     margin-right: 0;
@@ -54,6 +55,10 @@
       width: 16px;
     }
   }
+
+  &--catalog {
+    background-color: @background-form-direction;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -61,10 +66,15 @@
     &--form {
       padding-right: 10px;
       width: 25px;
+
+      &.ways-travel__item--plane {
+        width: 25px;
+      }
     }
 
-    &.ways-travel__item--plane {
-      width: 25px;
+    &--catalog {
+      background-color: transparent;
+      width: 20px;
     }
   }
 }

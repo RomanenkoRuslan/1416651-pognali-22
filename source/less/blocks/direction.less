@@ -102,7 +102,7 @@
 
 .direction__list {
   .list-rules();
-  margin-top: 65px;
+  margin-top: 62px;
 }
 
 .direction__img {
@@ -111,7 +111,7 @@
 
 .direction__more {
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 @media (min-width: @tablet-width) {
@@ -122,6 +122,7 @@
     line-height: 20px;
     margin-bottom: 0;
     margin-top: 5px;
+    padding-bottom: 0;
   }
 
   .direction__info {
@@ -135,6 +136,7 @@
     top: 0;
     padding-left: 31px;
     padding-top: 28px;
+    padding-bottom: 25px;
     justify-content: flex-start;
   }
 
@@ -150,6 +152,9 @@
 
   .direction {
     margin-left: 10px;
+    background-image: url("../img/background-direction.png");
+    background-repeat: no-repeat;
+    background-position: 430px 79px;
   }
 
   .direction__item {
@@ -158,6 +163,7 @@
     grid-template-rows: 140px;
     margin-bottom: 11px;
     margin-right: 15px;
+    align-items: flex-start;
   }
 
   .direction__img {
@@ -165,14 +171,13 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    height: 100%;
     border-radius: 0 20px 20px 0;
-    width: 187px;
+    position: relative;
   }
 
   .direction__list {
-    margin-top: 110px;
-    margin-left: 30px;
+    margin-top: 104px;
+    margin-left: 25px;
   }
 
   .direction__country {
@@ -183,16 +188,37 @@
       top: 30px;
       right: -20px;
     }
+
+    &--thailand::before {
+      content: url("../img/flag-thailand-table.png");
+      top: 17px;
+      right: 0;
+    }
+
+    &--france::before {
+      content: url("../img/flag-france-tablet.png");
+      position: absolute;
+      top: 17px;
+      right: -34px;
+    }
+
+    &--czech::before {
+      content: url("../img/flag-czech-tablet.png");
+      position: absolute;
+      top: 15px;
+      right: -33px;
+    }
   }
 
   .direction__people {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 17px;
+    margin-top: 15px;
     margin-left: 29px;
 
     &--czech {
       margin-top: 0;
+      padding-top: 0;
     }
   }
 

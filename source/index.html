@@ -11,7 +11,18 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__center center">
           <a class="main-nav__logo">
-            <img src="https://via.placeholder.com/96x15" alt="Логотип сайта">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.png">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.png">
+              <img src="./img/logo-mobile.png" alt="Логотип сайта">
+            </picture>
+          </a>
+          <a class="main-nav__logo--black">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png">
+              <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png">
+              <img src="./img/logo-mobile-black.png" alt="Логотип сайта">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -127,7 +138,10 @@
           </div>
           <ul class="direction__list"
             ><li class="direction__item">
-              <img class="direction__img" src="img/thailand-mobile.jpg">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/thailand-tablet.png 1x, img/thailand-tablet@2x.png 2x">
+                <img class="direction__img" src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.png 2x">
+              </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--thailand">Таиланд</h3>
                 <p class="direction__subtitle">Джунгли зовут!</p>
@@ -135,7 +149,10 @@
               </div>
             </li
             ><li class="direction__item">
-              <img class="direction__img" src="img/france-mobile.jpg">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/france-tablet.png 1x, img/france-tablet@2x.png 2x">
+                <img class="direction__img" src="img/france-mobile.jpg" srcset="img/france-mobile@2x.png 2x">
+              </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--france">Франция</h3>
                 <p class="direction__subtitle">Трэ бьен, манифик!</p>
@@ -143,7 +160,10 @@
               </div>
             </li
             ><li class="direction__item">
-              <img class="direction__img" src="img/czech-mobile.jpg">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/czech-tablet.png 1x, img/czech-tablet@2x.png 2x">
+                <img class="direction__img" src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.png 2x">
+              </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--czech">Чехия</h3>
                 <p class="direction__subtitle direction__subtitle--czech">Закоулки старой Европы</p>
@@ -167,7 +187,10 @@
           </div>
           <ul class="fellow-travelers__list">
             <li class="fellow-travelers__item">
-              <img сlass="fellow-travelers__img" src="img/firsova-avatar.jpg" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.png 1x, img/firsova-avatar-tablet@2x.png 2x">
+                <img class="fellow-travelers__img" src="img/firsova-avatar.png" srcset="img/firsova-avatar@2x.png 2x" alt="Фотография пользователя">
+              </picture>
               <p class="fellow-travelers__level">
                 <img src="img/mark-99.png" alt="Уровень пользователя">
                 <span class="fellow-travelers__level-number level-number visually-hidden">99 уровень</span>
@@ -195,7 +218,10 @@
               </ul>
             </li>
             <li class="fellow-travelers__item">
-              <img сlass="fellow-travelers__img" src="img/demin-avatar.jpg" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/demin-avatar-tablet.png 1x, img/demin-avatar-tablet@2x.png 2x">
+                <img class="fellow-travelers__img" src="img/demin-avatar.png" srcset="img/demin-avatar@2x.png 2x" alt="Фотография пользователя">
+              </picture>
               <p class="fellow-travelers__level">
                 <img src="img/mark-80.png" alt="Уровень пользователя">
                 <span class="fellow-travelers__level-number visually-hidden">80 уровень</span>
@@ -244,8 +270,32 @@
               <dd class="add-profile__price add-profile__price--third">59 руб./мес</dd>
             </div>
           </dl>
-          <a href="#" class="add-profile__business">Показать тарифы для бизнеса</a>
+          <a class="add-profile__business">Показать тарифы для бизнеса</a>
         </div>
+        <section class="popup-business-rates popup-business-rates-show">
+          <div class="popup-business-rates__center center">
+            <h3 class="popup-business-rates__title">Бизнес-тарифы</h3>
+            <dl class="popup-business-rates__list">
+              <div class="popup-business-rates__item">
+                <dt class="popup-business-rates__product">Реклама у блоггера</dt>
+                <dd class="popup-business-rates__price">300 000 руб./пост</dd>
+              </div>
+              <div class="popup-business-rates__item">
+                <dt class="popup-business-rates__product">Накрутка подписчиков</dt>
+                <dd class="popup-business-rates__price">от 1 руб./шт.</dd>
+              </div>
+              <div class="popup-business-rates__item">
+                <dt class="popup-business-rates__product">Лайки от ботов</dt>
+                <dd class="popup-business-rates__price">от 20 коп./лайк</dd>
+              </div>
+              <div class="popup-business-rates__item">
+                <dt class="popup-business-rates__product">Ваш продакт-плейсмент</dt>
+                <dd class="popup-business-rates__price">Индивидуально</dd>
+              </div>
+            </dl>
+          </div>
+          <button href="#" type="button" class="popup-business-rates__close">Закрыть окно</button>
+        </section>
       </section>
       <section class="feedback">
         <div class="feedback__center center">
@@ -303,7 +353,11 @@
     <footer class="page-footer">
       <div class="page-footer__center center">
         <a class="page-footer__logo">
-          <img src="img/logo.svg" alt="Логотип сайта">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png">
+            <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png">
+            <img src="./img/logo-mobile-black.png" alt="Логотип сайта">
+          </picture>
         </a>
         <div class="page-footer__socials socials">
           <a href="#" class="socials__item socials__item--footer-facebook socials__item--facebook">
@@ -324,45 +378,6 @@
         </div>
       </div>
     </footer>
-    <section class="popup-business-rates">
-      <div class="popup-business-rates__center center">
-        <h3 class="popup-business-rates__title">Бизнес-тарифы</h3>
-        <dl class="popup-business-rates__list">
-          <div class="popup-business-rates__item">
-            <dt class="popup-business-rates__product">Реклама у блоггера</dt>
-            <dd class="popup-business-rates__price">300 000 руб./пост</dd>
-          </div>
-          <div class="popup-business-rates__item">
-            <dt class="popup-business-rates__product">Накрутка подписчиков</dt>
-            <dd class="popup-business-rates__price">от 1 руб./шт.</dd>
-          </div>
-          <div class="popup-business-rates__item">
-            <dt class="popup-business-rates__product">Лайки от ботов</dt>
-            <dd class="popup-business-rates__price">от 20 коп./лайк</dd>
-          </div>
-          <div class="popup-business-rates__item">
-            <dt class="popup-business-rates__product">Ваш продакт-плейсмент</dt>
-            <dd class="popup-business-rates__price">Индивидуально</dd>
-          </div>
-        </dl>
-      </div>
-      <button type="button" class="popup-business-rates__close">Закрыть окно</button>
-    </section>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script href="#" src="./js/app.js"></script>
   </body>
 </html>

@@ -4,13 +4,21 @@
   color: @white;
 }
 
+.promo__center {
+  background-image: url("../img/traveller-illustration-mobile.png"), url("../img/background-promo.jpg");
+  background-repeat: no-repeat;
+  background-position: 80px 133px, 0 -30px;
+  background-size: auto, 100% 43.4%;
+}
+
 .promo__slogan {
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 250px;
+  margin-bottom: 0;
+  padding-bottom: 250px;
   color: @white;
 }
 
@@ -56,19 +64,19 @@
   &:nth-child(2) {
     background-color: @special-orange-light;
     position: relative;
-    top: -15px;
+    top: -16px;
   }
 
   &:nth-child(3) {
     background-color: @special-yellow-dark;
     position: relative;
-    top: -30px;
+    top: -32px;
   }
 
   &:last-child {
     background-color: @basic-yellow;
     position: relative;
-    top: -45px;
+    top: -48px;
     padding-bottom: 25px;
   }
 }
@@ -76,7 +84,7 @@
 .promo__advice-list {
   .list-rules();
   font-family: "Blogger Sans", sans-serif;
-  margin-top: 32px;
+  margin-top: 29px;
   position: relative;
 }
 
@@ -92,6 +100,15 @@
 @media (min-width: @tablet-width) {
   .promo {
     padding-top: 0;
+    background-color: @background-main-nav-tablet;
+  }
+
+  .promo__center {
+    padding-top: 8px;
+    background-image: url("../img/traveller-illustration-tablet.png"), url("../img/background-promo-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 285px 252px, left 230px;
+    background-size: auto, 100% 61%;
   }
 
   .promo__advice-list {
@@ -99,7 +116,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 215px;
+    margin-top: 211px;
     align-items: flex-start;
   }
 
@@ -109,7 +126,9 @@
     width: 650px;
     margin-left: 20px;
     margin-top: 0;
-    margin-bottom: 58px;
+    margin-bottom: 53px;
+    padding-bottom: 0;
+    background-image: none;
   }
 
   .promo__wrapper {
@@ -176,14 +195,15 @@
     width: 1320px;
   }
 
-  .promo {
-    padding-top: 65px;
-  }
-
   .promo__center {
+    padding-top: 110px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-image: url("../img/traveller-illustration-desktop.png"), url("../img/background-promo-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 605px 15px, left -81px;
+    background-size: auto, 100% 100%;
   }
 
   .promo__slogan {
@@ -206,7 +226,7 @@
   .promo__advice {
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 100px;
+    margin-top: 95px;
     padding-bottom: 32px;
 
     &:nth-child(2) {
@@ -232,7 +252,7 @@
     }
 
     &:last-child {
-      top: -208px;
+      top: -203px;
       left: 1005px;
       width: 283px;
       border-radius: 20px 20px 20px 20px;

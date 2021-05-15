@@ -59,6 +59,10 @@
       display: none;
     }
 
+    .main-nav__title {
+      display: block;
+    }
+
     .main-nav__list-user-list {
       display: none;
       position: relative;
@@ -194,6 +198,7 @@
 }
 
 .main-nav__title {
+  display: none;
   color: @white;
   font-weight: bold;
   font-size: 36px;
@@ -201,7 +206,7 @@
   grid-column-start: 1;
   grid-column-end: 3;
   margin-bottom: 0;
-  margin-top: 50px;
+  margin-top: 53px;
   position: relative;
 
   &::after {
@@ -231,7 +236,8 @@
 
     &--form {
       border-radius: 0 0 60px 60px;
-      padding-top: 10px;
+      padding-top: 13px;
+      padding-bottom: 24px;
 
       .main-nav__center {
         padding-top: 8px;
@@ -241,7 +247,7 @@
         top: 3px;
       }
 
-      .main-nav__title--form {
+      .main-nav__title {
         margin-top: 110px;
       }
     }
@@ -446,21 +452,24 @@
     }
 
     &--form {
+      padding-top: 30px;
+      padding-bottom: 70px;
+
       .main-nav__center {
         padding-top: 0;
       }
 
       .main-nav__list-user-list--form {
-        top: -10px;
+        top: -5px;
       }
 
       .main-nav__contacts--form {
-        top: 5px;
+        top: 7px;
         display: flex;
       }
 
       .main-nav__title {
-        margin-top: 111px;
+        margin-top: 115px;
         margin-left: 64px;
         margin-bottom: 1px;
       }

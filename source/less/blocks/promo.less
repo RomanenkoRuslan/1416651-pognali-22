@@ -9,6 +9,10 @@
   background-repeat: no-repeat;
   background-position: 80px 133px, 0 -30px;
   background-size: auto, 100% 43.4%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/traveller-illustration-mobile@2x.png"), url("../img/background-promo@2x.jpg");
+  }
 }
 
 .promo__slogan {
@@ -109,6 +113,10 @@
     background-repeat: no-repeat;
     background-position: 285px 252px, left 230px;
     background-size: auto, 100% 61%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png"), url("../img/background-promo-tablet@2x.jpg");
+    }
   }
 
   .promo__advice-list {
@@ -190,6 +198,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .promo {
+    background-color: @basic-blue;
+  }
+
   .promo__advice-list {
     margin-top: 0;
     width: 1320px;
@@ -204,6 +216,10 @@
     background-repeat: no-repeat;
     background-position: 605px 15px, left -81px;
     background-size: auto, 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png"), url("../img/background-promo-desktop@2x.png");
+    }
   }
 
   .promo__slogan {

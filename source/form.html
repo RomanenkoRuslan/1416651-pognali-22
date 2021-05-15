@@ -11,7 +11,18 @@
       <nav class="main-nav main-nav--closed main-nav--form main-nav--nojs">
         <div class="main-nav__center center">
           <a class="main-nav__logo">
-            <img src="https://via.placeholder.com/96x15" alt="Логотип сайта">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.png 1x, ./img/logo-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.png 1x, ./img/logo-tablet@2x.png 2x">
+              <img src="./img/logo-mobile.png" srcset="./img/logo-mobile@2x.png 2x" alt="Логотип сайта">
+            </picture>
+          </a>
+          <a class="main-nav__logo--black">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
+              <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -67,7 +78,7 @@
             <img src="img/mark_80-transparent.png" alt="Уровень пользователя" class="form-direction__mark">
             <span class="form-direction__level-number level-number visually-hidden">99 уровень</span>
           </p>
-          <img class="form-direction__img" src="img/demin-avatar.jpg" alt="Фотография пользователя">
+          <img class="form-direction__img" src="img/demin-avatar-tablet.png" srcset="img/demin-avatar-tablet@2x.png 2x" alt="Фотография пользователя">
           <a href="#" class="form-direction__button">
             <span class="form-direction__word">сменить </span>фото
           </a>
@@ -429,12 +440,18 @@
               </div>
               <div class="add-plan__country-wrap">
                 <h4 class="add-plan__comment-title add-plan__comment-title--bosnia">Босния и Герцеговина</h4>
-                <img src="img/bosnia-and-herzegovina.jpg" alt="Флаг страны" class="add-plan__comment-flag">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/bosnia-and-herzegovina-tablet.jpg 1x, img/bosnia-and-herzegovina-tablet@2x.jpg 2x">
+                  <img src="img/bosnia-and-herzegovina.jpg" srcset="img/bosnia-and-herzegovina@2x.jpg 2x" alt="Флаг страны" class="add-plan__comment-flag">
+                </picture>
               </div>
               <textarea class="add-plan__comment add-plan__comment--plan" placeholder="План действий"></textarea>
               <div class="add-plan__country-wrap">
                 <h4 class="add-plan__comment-title add-plan__comment-title--czech">Чехия</h4>
-                <img src="img/flag-czech-mobile.jpg" alt="Флаг страны" class="add-plan__comment-flag add-plan__comment-flag--czech">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/flag-czech-tablet.png 1x, img/flag-czech-tablet@2x.png 2x">
+                  <img src="img/flag-czech-mobile.jpg" srcset="img/flag-czech-mobile@2x.jpg 2x" alt="Флаг страны" class="add-plan__comment-flag add-plan__comment-flag--czech">
+                </picture>
               </div>
               <textarea class="add-plan__comment">Пить пиво и лазить
 по старым замкам, наслаждаться архитектурой и вот это все.
@@ -451,7 +468,11 @@
     <footer class="page-footer">
       <div class="page-footer__center center">
         <a class="page-footer__logo">
-          <img src="img/logo.svg" alt="Логотип сайта">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
+            <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
+          </picture>
         </a>
         <ul class="page-footer__socials socials">
           <li class="socials__item socials__item--footer-facebook socials__item--facebook">

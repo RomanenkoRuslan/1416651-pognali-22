@@ -1,10 +1,11 @@
 .ideal-companion {
   background-color: @basic-yellow;
   border-radius: 20px;
-  padding-left: 30px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 24px;
-  padding-bottom: 36px;
+  margin-top: 23px;
+  padding-bottom: 33px;
   margin-bottom: 27px;
   width: 220px;
   font-family: "Blogger Sans", sans-serif;
@@ -83,7 +84,7 @@
   border-radius: 25px;
   position: relative;
   left: -5px;
-  top: 3px;
+  top: 2px;
 }
 
 .ideal-companion__item-wrap {
@@ -195,10 +196,10 @@
 
 @media (min-width: @tablet-width) {
   .ideal-companion {
-    position: relative;
-    left: 10px;
-    width: 610px;
+    padding-left: 34px;
+    width: 628px;
     padding-top: 35px;
+    padding-bottom: 35px;
     margin-bottom: 41px;
   }
 
@@ -209,12 +210,13 @@
   }
 
   .ideal-companion__list {
+    width: 610px;
     border-top: 1px solid @border-list;
     border-bottom: 1px solid @border-list;
     margin-top: 39px;
     padding-top: 15px;
     padding-bottom: 22px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
 
   .ideal-companion__item-title {
@@ -341,30 +343,57 @@
 
   .ideal-companion__show {
     left: 0;
-    padding: 16px 355px;
+    width: 596px;
+    padding: 16px 10px;
     padding-bottom: 14px;
     font-size: 20px;
     line-height: 20px;
     margin-left: 2px;
     display: block;
     text-align: center;
-    padding-left: 262px;
     margin-bottom: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .ideal-companion {
-    width: 270px;
+    margin-top: 0;
+    padding-top: 44px;
+    padding-left: 48px;
+    padding-bottom: 46px;
+    width: 212px;
     order: 10;
   }
 
+  .ideal-companion__title {
+    margin-bottom: 0;
+  }
+
+  .ideal-companion__list {
+    width: 212px;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+  }
+
   .ideal-companion__item {
+    width: 190px;
     display: flex;
     flex-direction: column;
+
+    &--ways-travel {
+      margin-top: 0;
+    }
+
+    &--level {
+      margin-top: 11px;
+    }
   }
 
   .ideal-companion__item-wrap {
+    margin-top: 26px;
     flex-direction: column;
 
     &--hobby {
@@ -374,28 +403,48 @@
     &--food {
       display: none;
     }
+
+    &--level {
+      margin-top: 20px;
+    }
+  }
+
+  .ideal-companion__input {
+    width: 74px;
+  }
+
+  .ideal-companion__price-controls::after {
+    left: 85px;
   }
 
   .ideal-companion__button-turn {
+    top: 20px;
     display: block;
   }
 
   .ideal-companion__preference {
     margin-left: 0;
+    margin-bottom: 20px;
+    gap: 5px;
+
+    &:last-child {
+      margin-bottom: 13px;
+    }
   }
 
   .ideal-companion__ways-travel {
     flex-direction: row;
     margin-left: 0;
+    margin-top: 20px;
   }
 
   .ideal-companion__show {
-    width: 200px;
-    font-size: 17px;
-    line-height: 17px;
+    width: 190px;
+    font-size: 20px;
+    line-height: 20px;
     padding: 0;
-    padding-top: 12px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
   .ideal-companion__range-filter {
@@ -407,31 +456,32 @@
   }
 
   .ideal-companion__range-controls {
+    margin-top: 38px;
     margin-left: 0;
   }
 
   .ideal-companion__scale {
     height: 2px;
-    width: 100px;
+    width: 90px;
   }
 
   .ideal-companion__bar {
-    width: 140px;
+    width: 110px;
     height: 2px;
     left: 70px;
   }
 
   .ideal-companion__toggle {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     padding: 0;
 
     &--min {
-      left: 66px;
+      left: 58px;
     }
 
     &--max {
-      left: 209px;
+      left: 177px;
     }
   }
 }

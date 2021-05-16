@@ -11,7 +11,18 @@
       <nav class="main-nav main-nav--closed main-nav--form main-nav--catalog main-nav--nojs">
         <div class="main-nav__center main-nav__center--catalog center">
           <a class="main-nav__logo">
-            <img src="https://via.placeholder.com/96x15" alt="Логотип сайта">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop.png 1x, ./img/logo-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.png 1x, ./img/logo-tablet@2x.png 2x">
+              <img src="./img/logo-mobile.png" srcset="./img/logo-mobile@2x.png 2x" alt="Логотип сайта">
+            </picture>
+          </a>
+          <a class="main-nav__logo--black">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
+              <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -194,28 +205,30 @@
                 <li class="filter-country__desctop-item">
                   <h3 class="filter-country__letter-title">в</h3>
                   <ul class="filter-country__letter-list">
-                    <li class="filter-country__letter-item">Австралия</li>
-                    <li class="filter-country__letter-item">Австрия</li>
-                    <li class="filter-country__letter-item">Азербайджан</li>
-                    <li class="filter-country__letter-item">Албания</li>
-                    <li class="filter-country__letter-item">Алжир</li>
-                    <li class="filter-country__letter-item">Ангола</li>
-                    <li class="filter-country__letter-item">Андорра</li>
-                    <li class="filter-country__letter-item">Антигуа и Барбуда</li>
-                    <li class="filter-country__letter-item">Аргентина</li>
-                    <li class="filter-country__letter-item">Армения</li>
-                    <li class="filter-country__letter-item">Афганистан</li>
-                  </ul>
-                </li>
-                <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">г</h3>
-                  <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Вануата</li>
                     <li class="filter-country__letter-item">Великобритания</li>
                     <li class="filter-country__letter-item">Венгрия</li>
                     <li class="filter-country__letter-item">Венесуэла</li>
                     <li class="filter-country__letter-item">Восточный Тимор</li>
                     <li class="filter-country__letter-item">Вьетнам</li>
+                  </ul>
+                </li>
+                <li class="filter-country__desctop-item">
+                  <h3 class="filter-country__letter-title">г</h3>
+                  <ul class="filter-country__letter-list">
+                    <li class="filter-country__letter-item">Габон</li>
+                    <li class="filter-country__letter-item">Гаити</li>
+                    <li class="filter-country__letter-item">Гайана</li>
+                    <li class="filter-country__letter-item">Гамбия</li>
+                    <li class="filter-country__letter-item">Гана</li>
+                    <li class="filter-country__letter-item">Гватемала</li>
+                    <li class="filter-country__letter-item">Гвинея</li>
+                    <li class="filter-country__letter-item">Гвинея-Бисау</li>
+                    <li class="filter-country__letter-item">Германия</li>
+                    <li class="filter-country__letter-item">Гондурас</li>
+                    <li class="filter-country__letter-item">Гренада</li>
+                    <li class="filter-country__letter-item">Греция</li>
+                    <li class="filter-country__letter-item">Грузия</li>
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
@@ -343,7 +356,7 @@
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">с</h3>
+                  <h3 class="filter-country__letter-title filter-country__letter-title--c">с</h3>
                   <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Сальвадор</li>
                     <li class="filter-country__letter-item">Самоа</li>
@@ -360,7 +373,7 @@
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">т</h3>
+                  <h3 class="filter-country__letter-title  filter-country__letter-title--c">т</h3>
                   <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Таджикистан</li>
                     <li class="filter-country__letter-item">Тайланд</li>
@@ -375,7 +388,7 @@
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">у</h3>
+                  <h3 class="filter-country__letter-title filter-country__letter-title--c">у</h3>
                   <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Уганда</li>
                     <li class="filter-country__letter-item">Узбекистан</li>
@@ -384,7 +397,7 @@
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">ф</h3>
+                  <h3 class="filter-country__letter-title  filter-country__letter-title--c">ф</h3>
                   <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Фиджи</li>
                     <li class="filter-country__letter-item">Филиппины</li>
@@ -393,7 +406,7 @@
                   </ul>
                 </li>
                 <li class="filter-country__desctop-item">
-                  <h3 class="filter-country__letter-title">х</h3>
+                  <h3 class="filter-country__letter-title filter-country__letter-title--c">х</h3>
                   <ul class="filter-country__letter-list">
                     <li class="filter-country__letter-item">Хорватия</li>
                   </ul>
@@ -530,7 +543,7 @@
             <li class="ideal-companion__item ideal-companion__item--level">
               <h3 class="ideal-companion__item-title ideal-companion__item-title--level">левел:</h3>
               <button type="button" class="ideal-companion__button-turn ideal-companion__button-turn--opened"></button>
-              <div class="ideal-companion__item-wrap">
+              <div class="ideal-companion__item-wrap ideal-companion__item-wrap--level">
                 <fieldset class="ideal-companion__filter-item">
                   <div class="ideal-companion__range-filter">
                     <div class="ideal-companion__price-controls">
@@ -560,7 +573,10 @@
         <section class="catalog catalog__center">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <img class="catalog__avatar" src="img/firsova-avatar.jpg" alt="Аватар попутчика">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.png 1x, img/firsova-avatar-tablet@2x.png 2x">
+                <img class="catalog__avatar" src="img/firsova-avatar-catalog.png" srcset="img/firsova-avatar-catalog@2x.png 2x" alt="Аватар попутчика">
+              </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Таня Фирсова</h3>
               <p class="catalog__like">
                 <svg class="catalog__like-icon catalog__like-icon--liked" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -602,15 +618,21 @@
               </ul>
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
-                <p class="catalog____level level">
-                  <img class="catalog____level-img" src="img/mark-99-catalog.png" alt="Уровень пользователя">
+                <p class="catalog__level level">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/mark-99-catalog-tablet.png 1x, ./img/mark-99-catalog-tablet@2x.png 2x">
+                    <img class="catalog__level-img" src="./img/mark-99-catalog.png" srcset="./img/mark-99-catalog@2x.png 2x"alt="Уровень пользователя">
+                  </picture>
                   <span class="catalog__level-number level-number visually-hidden">99 уровень</span>
                 </p>
               </div>
               <a href="#" class="catalog__call">Позвать!</a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__avatar" src="img/demin-avatar.jpg" alt="Аватар попутчика">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/demin-avatar-tablet.png 1x, img/demin-avatar-tablet@2x.png 2x">
+                <img class="catalog__avatar" src="img/demin-avatar-catalog.png" srcset="img/demin-avatar-catalog@2x.png 2x"  alt="Аватар попутчика">
+              </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Петя Демин</h3>
               <p class="catalog__like">
                 <svg class="catalog__like-icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -653,14 +675,20 @@
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
                 <p class="catalog____level level">
-                  <img class="catalog____level-img" src="img/mark-80-catalog.png" alt="Уровень пользователя">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/mark-80-catalog-tablet.png 1x, ./img/mark-80-catalog-tablet@2x.png 2x">
+                    <img class="catalog____level-img" src="./img/mark-80-catalog.png" srcset="./img/mark-80-catalog@2x.png 2x"alt="Уровень пользователя">
+                  </picture>
                   <span class="catalog__level-number level-number visually-hidden">80 уровень</span>
                 </p>
               </div>
               <a href="#" class="catalog__call">Позвать!</a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__avatar catalog__avatar--liked" src="img/smolov-avatar.jpg" alt="Аватар попутчика">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/smolov-avatar-tablet.png 1x, img/smolov-avatar-tablet@2x.png 2x">
+                <img class="catalog__avatar catalog__avatar--liked" src="img/smolov-avatar.png" srcset="img/smolov-avatar@2x.jpg 2x"  alt="Аватар попутчика">
+              </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Марк Смолов</h3>
               <p class="catalog__like">
                 <svg class="catalog__like-icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -704,14 +732,20 @@
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
                 <p class="catalog____level level">
-                  <img class="catalog____level-img" src="img/mark-25-catalog.png" alt="Уровень пользователя">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/mark-25-catalog-tablet.png 1x, ./img/mark-25-catalog-tablet@2x.png 2x">
+                    <img class="catalog____level-img" src="./img/mark-25-catalog.png" srcset="./img/mark-25-catalog@2x.png 2x"alt="Уровень пользователя">
+                  </picture>
                   <span class="catalog__level-number level-number visually-hidden">25 уровень</span>
                 </p>
               </div>
               <a href="#" class="catalog__call">Позвать!</a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__avatar catalog__avatar--liked" src="img/rogovay-avatar.jpg" alt="Аватар попутчика">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/rogovay-avatar-catalog-tablet.png 1x, img/rogovay-avatar-catalog-tablet@2x.png 2x">
+                <img class="catalog__avatar catalog__avatar--liked" src="img/rogovay-avatar-catalog.png" srcset="img/rogovay-avatar-catalog@2x.png 2x"  alt="Аватар попутчика">
+              </picture>
               <h3 class="catalog__user-name catalog__user-name--online">Лариса Роговая</h3>
               <p class="catalog__like">
                 <svg class="catalog__like-icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -754,11 +788,14 @@
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
                 <p class="catalog____level level">
-                  <img class="catalog____level-img" src="img/mark-50-catalog.png" alt="Уровень пользователя">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/mark-50-catalog-tablet.png 1x, ./img/mark-50-catalog-tablet@2x.png 2x">
+                    <img class="catalog____level-img" src="./img/mark-50-catalog.png" srcset="./img/mark-50-catalog@2x.png 2x"alt="Уровень пользователя">
+                  </picture>
                   <span class="catalog__level-number level-number visually-hidden">50 уровень</span>
                 </p>
               </div>
-              <a href="#" class="catalog__call button button--catalog">Позвать!</a>
+              <a href="#" class="catalog__call catalog__call--last">Позвать!</a>
             </li>
           </ul>
           <a href="#" class="catalog__show">
@@ -786,7 +823,11 @@
     <footer class="page-footer">
       <div class="page-footer__center center">
         <a class="page-footer__logo">
-          <img src="img/logo.svg" alt="Логотип сайта">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
+            <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
+          </picture>
         </a>
         <ul class="page-footer__socials socials">
           <li class="socials__item socials__item--footer-facebook socials__item--facebook">

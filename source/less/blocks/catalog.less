@@ -133,11 +133,15 @@
   color: @basic-blue;
   background-color: @basic-yellow;
   display: block;
-  margin-top: 24px;
+  margin-top: 22px;
   width: 230px;
   padding-top: 13px;
   padding-bottom: 10px;
   padding-left: 2px;
+
+  &--last {
+    margin-top: 19px;
+  }
 }
 
 .catalog__show {
@@ -230,7 +234,7 @@
 
 .catalog__level-wrap {
   position: absolute;
-  bottom: 57px;
+  bottom: 59px;
   left: 205px;
 }
 
@@ -286,11 +290,13 @@
 
   .catalog__item {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    align-items: flex-start;
     padding-top: 33px;
     padding-left: 35px;
     margin-bottom: 40px;
+    padding-bottom: 19px;
   }
 
   .catalog__want-visit-area {
@@ -298,10 +304,18 @@
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: 21px;
+    margin-top: 16px;
+  }
+
+  .catalog____level-img {
+    position: relative;
+    left: -10px;
+    margin-bottom: 12px;
   }
 
   .catalog__want-visit {
+    margin-top: 17px;
+    margin-left: 0;
     display: flex;
   }
 
@@ -322,6 +336,16 @@
     &--ways-travel {
       display: none;
     }
+
+    &::after {
+      width: 500px;
+    }
+
+    &::before {
+      width: 100px;
+      left: -110px;
+      top: 9px;
+    }
   }
 
   .catalog__level {
@@ -332,34 +356,39 @@
   }
 
   .catalog__text {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
     font-size: 20px;
     line-height: 23px;
     width: 230px;
-    margin-top: 0;
+    margin-top: 48px;
     margin-bottom: 0;
     height: 54px;
+    margin-left: 15px;
   }
 
   .catalog__call {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
     font-size: 20px;
     line-height: 20px;
-    width: 150px;
-    margin-top: 0;
+    width: 147px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    margin-top: 140px;
+    margin-left: 8px;
   }
 
   .catalog__like {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    top: 108px;
-    left: 208px;
+    top: 157px;
+    left: 213px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -383,9 +412,10 @@
     grid-row-end: 3;
     display: flex;
     flex-direction: column;
+    justify-self: right;
     margin-top: 0;
     margin-left: 0;
-    margin-right: 10px;
+    margin-right: 35px;
   }
 
   .country-item {
@@ -393,12 +423,14 @@
   }
 
   .catalog__user-name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
     font-size: 30px;
     width: auto;
     margin-bottom: 0;
-    margin-left: 5px;
     margin-top: 3px;
-    height: 3px;
     position: relative;
     display: flex;
 
@@ -417,8 +449,9 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 3px;
-    margin-right: 27px;
+    margin-right: 22px;
     margin-bottom: 4px;
+    gap: 13px;
   }
 
   .catalog__show {
@@ -445,19 +478,55 @@
     }
   }
 
+  .catalog__avatar {
+    margin-top: 0;
+    width: 285px;
+  }
+
+  .catalog__user-name {
+    margin-top: 50px;
+    margin-left: 62px;
+  }
+
+  .catalog__text {
+    margin-top: 95px;
+    margin-left: 62px;
+  }
+
+  .catalog__call {
+    margin-top: 185px;
+    margin-left: 53px;
+  }
+
+  .catalog__like {
+    margin-left: 48px;
+    margin-top: 45px;
+  }
+
   .catalog__item {
+    width: 949px;
+    padding-top: 0;
+    padding-left: 0;
     display: grid;
     align-items: flex-start;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: 285px repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     padding-bottom: 0;
+    margin-bottom: 26px;
   }
 
   .catalog__want-visit-area {
+    margin-top: 28px;
     grid-row-start: 1;
     grid-row-end: 3;
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .catalog__country {
+    margin-right: 0;
+    justify-self: left;
+    margin-bottom: 7px;
   }
 
   .catalog__want-visit {
@@ -478,14 +547,27 @@
   }
 
   .catalog__ways-travel {
+    margin-top: 195px;
+    justify-self: left;
     flex-direction: row;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .catalog__level-img {
+    margin-bottom: 25px;
+  }
+
+  .catalog__show {
+    margin-top: 56px;
+    margin-right: 75px;
   }
 
   .catalog__pagination {
-    width: 910px;
+    margin-top: 76px;
+    width: 890px;
+    padding-right: 30px;
   }
 }

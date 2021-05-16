@@ -8,8 +8,8 @@ popupLink.addEventListener("click", (evt) => {
 })
 
 closeButton.addEventListener("click", (evt) => {
-	evt.preventDefault();
-	popup.classList.add("popup-business-rates-show");
+  evt.preventDefault();
+  popup.classList.add("popup-business-rates-show");
 });
 
 window.addEventListener("keydown", (evt) => {

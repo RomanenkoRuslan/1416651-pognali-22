@@ -7,6 +7,10 @@
   padding-bottom: 23px;
   position: relative;
   margin-bottom: 10px;
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+  }
 }
 
 .catalog__user-name {
@@ -60,8 +64,8 @@
   &--liked {
     background-color: @background-icon-like;
 
-    .path {
-      fill: @fill-icon-like;
+    .use {
+      stroke: @fill-icon-like;
     }
   }
 }

@@ -40,6 +40,14 @@
   padding-top: 11px;
   margin-bottom: 0;
   margin-top: 10px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .ideal-companion__button-turn {
@@ -68,6 +76,14 @@
   margin-bottom: 10px;
   flex-direction: row-reverse;
   justify-content: flex-end;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .ideal-companion__show {
@@ -85,6 +101,14 @@
   position: relative;
   left: -5px;
   top: 2px;
+
+  &:hover {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .ideal-companion__item-wrap {
@@ -149,6 +173,15 @@
   background-color: @basic-blue-light;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
 }
 
 .ideal-companion__toggle--min {
@@ -173,6 +206,14 @@
   letter-spacing: 0.06em;
   color: @basic-blue-light;
   border: 1px solid @ideal-companion-input;
+
+  &:hover {
+    border-color: @checkbox-border;
+  }
+
+  &:active {
+    border-color: @black;
+  }
 
   &--min-price {
     border-right: none;

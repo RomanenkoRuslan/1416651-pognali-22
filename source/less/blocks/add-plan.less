@@ -139,6 +139,14 @@
   font-size: 15px;
   line-height: 14px;
   color: @basic-blue-light;
+
+  &:hover {
+    border-color: @checkbox-border;
+  }
+
+  &:active {
+    border-color: @basic-blue-light;
+  }
 }
 
 .add-plan__details {
@@ -164,6 +172,14 @@
   border: none;
   opacity: 0.3;
   padding: 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .add-plan__forward {
@@ -205,6 +221,10 @@
   color: @special-grey;
   text-align: center;
   border: 1px solid @border-item-add-plan;
+
+  &:hover {
+    outline: 2px solid @color-weekends;
+  }
 
   &--days-week {
     border: none;
@@ -376,6 +396,14 @@
   margin-right: 25px;
   text-align: center;
 
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
   &--first {
     margin-top: 22px;
   }
@@ -408,6 +436,14 @@
   margin-right: 25px;
   margin-top: 11px;
   margin-bottom: 11px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .add-plan__comment-title {
@@ -443,6 +479,18 @@
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: @checkbox-border;
+  }
+
+  &:active {
+    border-color: @black;
+
+    &::placeholder {
+      opacity: 1;
+    }
   }
 
   &--plan {
@@ -1078,6 +1126,12 @@
     vertical-align: top;
     padding-top: 12px;
     position: relative;
+
+    &:hover {
+      outline: 4px solid @color-weekends;
+      z-index: 10;
+      border: 2px solid @color-weekends;
+    }
 
     &--days-week {
       height: 38px;

@@ -23,6 +23,14 @@
   vertical-align: top;
   margin-left: 12px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
     background-color: @flag-offline;
@@ -143,6 +151,14 @@
   padding-bottom: 10px;
   padding-left: 2px;
 
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   &--last {
     margin-top: 19px;
   }
@@ -158,6 +174,18 @@
   display: block;
   text-decoration: none;
   text-align: center;
+
+  &:hover {
+    .catalog__show-svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    .catalog__show-svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .catalog__show-svg {
@@ -189,6 +217,14 @@
   background-image: url("../img/polygon.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--back {
     border-radius: 0 20px 20px 0;
@@ -273,6 +309,10 @@
     padding: 15px 20px;
     margin-right: 0;
     margin-left: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     &--active {
       background-color: @basic-yellow;

@@ -13,6 +13,15 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
+
+  &:hover {
+    background-color: @color-alphabet-cell;
+    color: @white;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
 }
 
 .address__rout::before {

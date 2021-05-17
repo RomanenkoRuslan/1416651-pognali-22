@@ -188,6 +188,8 @@
           <ul class="fellow-travelers__list">
             <li class="fellow-travelers__item">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.webp 1x, img/firsova-avatar-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/firsova-avatar.webp 1x, img/firsova-avatar@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.png 1x, img/firsova-avatar-tablet@2x.png 2x">
                 <img class="fellow-travelers__img" src="img/firsova-avatar.png" srcset="img/firsova-avatar@2x.png 2x" alt="Фотография пользователя">
               </picture>
@@ -219,6 +221,8 @@
             </li>
             <li class="fellow-travelers__item">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-avatar-tablet.webp 1x, img/demin-avatar-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-avatar.webp 1x, img/demin-avatar@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-avatar-tablet.png 1x, img/demin-avatar-tablet@2x.png 2x">
                 <img class="fellow-travelers__img" src="img/demin-avatar.png" srcset="img/demin-avatar@2x.png 2x" alt="Фотография пользователя">
               </picture>
@@ -309,8 +313,8 @@
           <div class="feedback__email-area">
             <input type="email" class="feedback__email" placeholder="E-mail">
             <span class="feedback__span">Регистрация</span>
-            <svg class="feedback__svg" width="13" height="14" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.0698 6.07495L0.157238 11.7041L0.157238 0.445786L10.0698 6.07495Z" fill="#1D2E5B"/>
+            <svg class="feedback__svg" width="13" height="14">
+              <use xlink:href="./img/sprite.svg#polygon"></use>
             </svg>
           </div>
           <p class="feedback__text feedback__text--comment">

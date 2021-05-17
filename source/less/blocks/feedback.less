@@ -37,6 +37,14 @@
   text-decoration: underline;
   text-transform: lowercase;
   color: @basic-yellow;
+
+  &:hover {
+    color: @special-orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .feedback__email {
@@ -55,6 +63,21 @@
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    background-color: @border-catalog-title;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: @color-alphabet-cell;
+
+    &::placeholder {
+      color: @white;
+      opacity: 1;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 .address {
   background-color: @basic-yellow;
   color: @basic-blue-light;
-  padding-top: 40px;
+  padding-top: 45px;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   padding-top: 18px;
   padding-left: 19px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   position: relative;
 
   &:hover {
@@ -24,22 +24,24 @@
   }
 }
 
-.address__rout::before {
-  content: url("../img/polygon.svg");
-  position: relative;
-  margin-right: 10px;
-}
-
-.address__rout::after {
-  content: url("../img/icon_location.svg");
-  text-align: center;
-  padding: 10px 12px;
+.address__svg {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: @background-svg;
-  margin-right: 20px;
-  position: absolute;
-  top: -80px;
-  left: -3px;
+  margin-right: 15px;
+}
+
+.address__street {
+  width: 145px;
+}
+
+.address__rout-svg {
+  margin-right: 9px;
+  margin-top: 3px;
 }
 
 .address__title {
@@ -48,10 +50,9 @@
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  width: 200px;
-  margin-left: 61px;
   margin-top: 17px;
   margin-bottom: 33px;
+  display: flex;
 }
 
 .address__title::after {
@@ -60,7 +61,7 @@
   height: 30px;
   background-color: @basic-blue-dark;
   position: absolute;
-  top: -5px;
+  top: 0;
   left: 0;
   border-radius: 0 0 35px 35px;
 }
@@ -92,18 +93,29 @@
     font-size: 28px;
     line-height: 28px;
     width: auto;
-    margin-top: 80px;
-    margin-left: 129px;
+    margin-top: 58px;
+    margin-left: 35px;
     padding-top: 2px;
+    align-items: center;
   }
 
   .address__area {
     padding-bottom: 30px;
   }
 
+  .address__street {
+    width: auto;
+  }
+
+  .address__svg {
+    width: 68px;
+    height: 68px;
+    margin-right: 26px;
+  }
+
   .address__rout {
     width: 567px;
-    margin-top: 65px;
+    margin-top: 44px;
     margin-left: 35px;
     padding-top: 24px;
     padding-left: 35px;
@@ -147,13 +159,30 @@
   }
 
   .address__title {
-    margin-left: 345px;
+    margin-left: 223px;
+    margin-top: 44px;
     margin-bottom: 0;
 
     &::before {
-      height: 58px;
+      height: 55px;
       border-radius: 0 0 55px 55px;
       bottom: -50px;
     }
+  }
+
+  .address__rout-svg {
+    margin-right: 20px;
+    margin-top: 6px;
+  }
+
+  .address__svg {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
+  }
+
+  .address__svg-item {
+    width: 42px;
+    height: 42px;
   }
 }

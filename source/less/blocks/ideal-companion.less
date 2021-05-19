@@ -55,7 +55,7 @@
   height: 15px;
   background-color: transparent;
   border: none;
-  background-image: url("../img/polygon.svg");
+  background-image: url("../img/icons/polygon.svg");
   background-repeat: no-repeat;
   transform: rotate(90deg);
   position: absolute;
@@ -84,6 +84,10 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.ideal-companion__ways-title {
+  display: none;
 }
 
 .ideal-companion__show {
@@ -127,6 +131,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 21px;
+  justify-content: left;
 }
 
 .ideal-companion__filter-item {
@@ -229,7 +234,7 @@
   flex-direction: row;
 
   &::after {
-    content: url("../img/border-level.svg");
+    content: url("../img/icons/border-level.svg");
     position: absolute;
     left: 100px;
   }
@@ -256,7 +261,7 @@
     border-bottom: 1px solid @border-list;
     margin-top: 39px;
     padding-top: 15px;
-    padding-bottom: 22px;
+    padding-bottom: 19px;
     margin-bottom: 34px;
   }
 
@@ -299,10 +304,6 @@
     margin-top: 8px;
     margin-left: 15px;
     margin-bottom: 0;
-  }
-
-  .ideal-companion__ways-travel-item {
-    margin-right: 3px;
   }
 
   .ideal-companion__range-filter {
@@ -429,7 +430,7 @@
     }
 
     &--level {
-      margin-top: 11px;
+      margin-top: 8px;
     }
   }
 

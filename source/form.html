@@ -41,13 +41,27 @@
           <ul class="main-nav__contacts main-nav__contacts--form contacts-list">
             <li class="contacts-list__item">
               <a href="tel:+88005558628" class="contacts-list__tel">
-                <span class="contacts-list__svg-tel"></span>
+                <span class="contacts-list__svg contacts-list__svg--tel">
+                  <svg class="contacts-list__svg-menu" width="23" height="22">
+                    <use xlink:href="./img/icons/sprite.svg#icon_telephone"></use>
+                  </svg>
+                  <svg class="contacts-list__svg-menu-desktop" width="23" height="22">
+                    <use xlink:href="./img/icons/sprite.svg#icon_call"></use>
+                  </svg>
+                </span>
                 <span class="contacts-list__item-area">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
-                <span class="contacts-list__svg-email"></span>
+                <span class="contacts-list__svg contacts-list__svg--email">
+                  <svg class="contacts-list__svg-menu" width="23" height="22">
+                    <use xlink:href="./img/icons/sprite.svg#icon_letter"></use>
+                  </svg>
+                  <svg class="contacts-list__svg-menu-desktop" width="23" height="22">
+                    <use xlink:href="./img/icons/sprite.svg#icon_mail"></use>
+                  </svg>
+                </span>
                 <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
               </a>
             </li>
@@ -56,14 +70,23 @@
             <a href="#" class="user-list__link user-list__link--form">авторизация</a>
           </div>
           <ul class="main-nav__socials socials">
-            <li class="main-nav__socials-item socials__item socials__item--facebook">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Фэйсбук</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/icons/sprite.svg#icon_facebook"></use>
+              </svg>
             </li>
-            <li class="main-nav__socials-item socials__item socials__item--vk">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Вконтакте</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/icons/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </li>
-            <li class="main-nav__socials-item socials__item socials__item--instagram">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Инстаграм</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/icons/sprite.svg#icon_instagram"></use>
+              </svg>
             </li>
           </ul>
           <h2 class="main-nav__title">Направления</h2>
@@ -91,19 +114,31 @@
             <ul class="form-direction__ways-travel ways-travel">
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--plane
               ways-travel__item--form">
-                <span class="visually-hidden">На самолете</span>
+                <svg class="form-direction_svg" width="23" height="22">
+                  <use xlink:href="./img/icons/sprite.svg#icon_plane"></use>
+                </svg>
+                <span class="form-direction_ways-title">Авиаперелет</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--bus
               ways-travel__item--form">
-                <span class="visually-hidden">На автобусе</span>
+                <svg class="form-direction_svg" width="23" height="22">
+                  <use xlink:href="./img/icons/sprite.svg#icon_bus"></use>
+                </svg>
+                <span class="form-direction_ways-title">Автотранспорт</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--bicycle
               ways-travel__item--form">
-                <span class="visually-hidden">На велосипеде</span>
+                <svg class="form-direction_svg" width="23" height="22" opacity="0.2">
+                  <use xlink:href="./img/icons/sprite.svg#icon_bicycle"></use>
+                </svg>
+                <span class="form-direction_ways-title">Велосипед</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--run
               ways-travel__item--form">
-                <span class="visually-hidden">Бегом</span>
+                <svg class="form-direction_svg" width="23" height="22">
+                  <use xlink:href="./img/icons/sprite.svg#icon_run"></use>
+                </svg>
+                <span class="form-direction_ways-title">Пешком</span>
               </li>
             </ul>
           </div>
@@ -177,12 +212,12 @@
                     <input class="add-plan__counter" type="number" min="1" max="10" value="2">
                     <button class="add-plan__button add-plan__button--minus">
                       <svg class="add-plan__button-svg" width="14" height="2">
-                        <use xlink:href="./img/sprite.svg#minus"></use>
+                        <use xlink:href="./img/icons/sprite.svg#minus"></use>
                       </svg>
                     </button>
                     <button class="add-plan__button add-plan__button--plus">
                       <svg class="add-plan__button-svg" width="14" height="14">
-                        <use xlink:href="./img/sprite.svg#plus"></use>
+                        <use xlink:href="./img/icons/sprite.svg#plus"></use>
                       </svg>
                     </button>
                   </label>
@@ -193,13 +228,13 @@
                     <span class="add-plan__title-measure add-plan__title-measure--day">дн.</span><br>
                     <input class="add-plan__counter" type="number" min="1" max="100" value="3">
                     <button class="add-plan__button add-plan__button--minus add-plan__button--second">
-                      <svg width="14" height="2">
-                        <use xlink:href="./img/sprite.svg#minus"></use>
+                      <svg class="add-plan__button-svg" width="14" height="2">
+                        <use xlink:href="./img/icons/sprite.svg#minus"></use>
                       </svg>
                     </button>
                     <button class="add-plan__button add-plan__button--plus add-plan__button--second">
-                      <svg width="14" height="14">
-                        <use xlink:href="./img/sprite.svg#plus"></use>
+                      <svg class="add-plan__button-svg" width="14" height="14">
+                        <use xlink:href="./img/icons/sprite.svg#plus"></use>
                       </svg>
                     </button>
                   </label>
@@ -214,13 +249,13 @@
                 <div class="add-plan__mounth-wrap">
                   <button type="button" class="add-plan__back">
                     <svg width="9" height="19">
-                      <use xlink:href="./img/sprite.svg#arrow"></use>
+                      <use xlink:href="./img/icons/sprite.svg#arrow"></use>
                     </svg>
                   </button>
                   <p class="add-plan__mounth">Март 2019</p>
                   <button type="button" class="add-plan__forward">
                     <svg width="9" height="19">
-                      <use xlink:href="./img/sprite.svg#arrow"></use>
+                      <use xlink:href="./img/icons/sprite.svg#arrow"></use>
                     </svg>
                   </button>
                 </div>
@@ -331,7 +366,7 @@
                     <span class="visually-hidden">Удалить</span>
                   </button>
                 </div>
-                <div class="add-plan__country-area">
+                <div class="add-plan__country-area add-plan__country-area--select">
                   <select size="1" class="add-plan__country add-plan__country--select">
                     <option>выберите страну</option>
                   </select>
@@ -341,42 +376,45 @@
                   </button>
                 </div>
               </fieldset>
-              <div class="add-plan__country-dropdown visually-hidden">
-                <table class="add-plan__alphabet alphabet">
+              <div class="add-plan__country-dropdown add-plan__country-dropdown--close">
+                <button class="add-plan__country-dropdown-button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+                <table class="add-plan__alphabet alphabet alphabet--add-plan">
                   <tr class="alphabet__row">
-                    <td class="alphabet__cell alphabet__cell--selected-add-plan">а</td>
-                    <td class="alphabet__cell">б</td>
-                    <td class="alphabet__cell">в</td>
-                    <td class="alphabet__cell">г</td>
-                    <td class="alphabet__cell">д</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan alphabet__cell--selected-add-plan">а</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">б</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">в</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">г</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">д</td>
                   </tr>
                   <tr class="alphabet__row">
-                    <td class="alphabet__cell">е</td>
-                    <td class="alphabet__cell">з</td>
-                    <td class="alphabet__cell">и</td>
-                    <td class="alphabet__cell">к</td>
-                    <td class="alphabet__cell">л</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">е</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">з</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">и</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">к</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">л</td>
                   </tr>
                   <tr class="alphabet__row">
-                    <td class="alphabet__cell">м</td>
-                    <td class="alphabet__cell">н</td>
-                    <td class="alphabet__cell">о</td>
-                    <td class="alphabet__cell">п</td>
-                    <td class="alphabet__cell">р</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">м</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">н</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">о</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">п</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">р</td>
                   </tr>
                   <tr class="alphabet__row">
-                    <td class="alphabet__cell">с</td>
-                    <td class="alphabet__cell">т</td>
-                    <td class="alphabet__cell">у</td>
-                    <td class="alphabet__cell">ф</td>
-                    <td class="alphabet__cell">х</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">с</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">т</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">у</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">ф</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">х</td>
                   </tr>
                   <tr class="alphabet__row">
-                    <td class="alphabet__cell">ч</td>
-                    <td class="alphabet__cell">ш</td>
-                    <td class="alphabet__cell">щ</td>
-                    <td class="alphabet__cell">э</td>
-                    <td class="alphabet__cell">ю</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">ч</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">ш</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">э</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">ю</td>
+                    <td class="alphabet__cell alphabet__cell--add-plan">я</td>
                   </tr>
                 </table>
                 <ul class="add-plan__country-letter-a-list country-letter-a-list">
@@ -460,40 +498,34 @@
             <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
           </picture>
         </a>
-        <ul class="page-footer__socials socials">
-          <li class="socials__item socials__item--footer-facebook socials__item--facebook">
+        <div class="page-footer__socials socials">
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Фэйсбук</span>
-          </li>
-          <li class="socials__item socials__item--footer-vk socials__item--vk">
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/icons/sprite.svg#icon_facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Вконтакте</span>
-          </li>
-          <li class="socials__item socials__item--footer-instagram socials__item--instagram">
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/icons/sprite.svg#icon_vkontakte"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Инстаграм</span>
-          </li>
-        </ul>
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/icons/sprite.svg#icon_instagram"></use>
+            </svg>
+          </a>
+        </div>
         <div class="page-footer__copy">
           <p class="page-footer__text">Разработано</p>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo-academy">
-            <img src="img/htmlacademy.svg" alt="Лого HTML Academy" class="page-footer__img">
+            <img src="img/icons/htmlacademy.svg" alt="Лого HTML Academy" class="page-footer__img">
           </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script href="#" src="./js/app.js"></script>
   </body>
 </html>

@@ -73,18 +73,19 @@
   padding-top: 3px;
   margin-right: 24px;
   color: @direction-subtitle;
-  position: relative;
-}
-
-.direction__people::before {
-  content: url("../img/icon_user.svg");
-  position: absolute;
-  left: -20px;
 }
 
 .direction__item {
   position: relative;
   padding-bottom: 0;
+
+  &--france {
+    top: -2px;
+  }
+
+  &--czech {
+    top: -5px;
+  }
 }
 
 .direction__info {
@@ -111,7 +112,7 @@
 
 .direction__more {
   display: flex;
-  margin-top: 5px;
+  margin-top: 9px;
 }
 
 @media (min-width: @tablet-width) {
@@ -123,6 +124,11 @@
     margin-bottom: 0;
     margin-top: 5px;
     padding-bottom: 0;
+
+    &--czech {
+      width: 140px;
+      margin-top: 3px;
+    }
   }
 
   .direction__info {
@@ -136,7 +142,7 @@
     top: 0;
     padding-left: 31px;
     padding-top: 28px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     justify-content: flex-start;
   }
 
@@ -165,7 +171,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 140px;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
     margin-right: 15px;
     align-items: flex-start;
   }
@@ -218,7 +224,9 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 15px;
-    margin-left: 29px;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
 
     &--czech {
       margin-top: 0;
@@ -226,19 +234,38 @@
     }
   }
 
+  .direction__people-svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .direction__more {
-    margin-top: 45px;
+    margin-top: 40px;
     margin-left: 26px;
     margin-right: 44px;
+  }
+
+  .direction__more-svg {
+    margin-right: 20px;
+    margin-top: 8px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .direction {
+    padding-bottom: 40px;
+    background-position: 1082px 88px;
+  }
+
   .direction__center {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
     padding-top: 93px;
+  }
+
+  .direction__more-svg {
+    margin-right: 30px;
   }
 
   .direction__list {
@@ -254,12 +281,33 @@
   }
 
   .direction__more {
+    margin-top: 0;
+    margin-bottom: 9px;
     grid-column-start: 2;
     margin-left: 135px;
   }
 
   .direction__title {
     margin-bottom: 0;
+  }
+
+  .direction__country {
+    &--thailand::before {
+      top: 23px;
+      right: 0;
+    }
+
+    &--france::before {
+      position: absolute;
+      top: 21px;
+      right: -36px;
+    }
+
+    &--czech::before {
+      position: absolute;
+      top: 20px;
+      right: -36px;
+    }
   }
 
   .direction__text {
@@ -281,7 +329,7 @@
       z-index: 5;
       position: absolute;
       left: 33px;
-      top: 60px;
+      top: 78px;
     }
   }
 

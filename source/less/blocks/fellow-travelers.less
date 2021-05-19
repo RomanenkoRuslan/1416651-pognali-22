@@ -27,6 +27,10 @@
   margin-right: 30px;
 }
 
+.fellow-travelers__ways-title {
+  display: none;
+}
+
 .fellow-travelers__title::before {
   content: "";
   width: 100%;
@@ -139,6 +143,8 @@
 .fellow-travelers__more {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: @tablet-width) {
@@ -155,7 +161,7 @@
   .fellow-travelers__list {
     display: flex;
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 62px;
     margin-left: 25px;
   }
 
@@ -169,15 +175,11 @@
     padding-left: 9px;
     padding-bottom: 68px;
     border-radius: 0 0 60px 60px;
+  }
 
-    .button-index {
-      justify-content: flex-start;
-      padding-top: 26px;
-
-      &::after {
-        margin-left: 385px;
-      }
-    }
+  .fellow-travelers__level {
+    margin-top: 20px;
+    margin-left: 5px;
   }
 
   .fellow-travelers__title {
@@ -211,11 +213,25 @@
     margin-top: 71px;
     margin-left: 25px;
     margin-right: 47px;
+    padding-right: 33px;
+    align-items: baseline;
+    padding-top: 25px;
+    padding-bottom: 30px;
   }
 
   .fellow-travelers__user-name {
     font-size: 24px;
     line-height: 22px;
+    margin-top: 16px;
+    text-align: left;
+    margin-left: 68px;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      left: -22px;
+      top: 16px;
+    }
   }
 
   .fellow-travelers__hobbies {
@@ -228,12 +244,20 @@
   }
 
   .fellow-travelers__ways-travel-list {
-    margin-left: 43px;
-    padding-bottom: 28px;
+    margin-left: 40px;
+    padding-bottom: 26px;
   }
 
   .fellow-travelers__country-list {
-    top: 270px;
+    margin-left: 0;
+    width: 285px;
+    justify-content: center;
+    top: 272px;
+    left: 10px;
+  }
+
+  .fellow-travelers__ways-travel__item {
+    margin-top: 2px;
   }
 }
 
@@ -242,7 +266,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    padding-top: 135px;
+    padding-top: 85px;
+    background-position: 182px 348px, 538px 96px;
   }
 
   .fellow-travelers__list {
@@ -263,6 +288,7 @@
   }
 
   .fellow-travelers__more {
+    width: 214px;
     align-self: start;
     grid-row-start: 2;
     grid-row-end: 3;
@@ -272,7 +298,7 @@
   }
 
   .fellow-travelers__title::before {
-    height: 136px;
+    height: 86px;
     border-radius: 0 0 60px 60px;
   }
 

@@ -88,9 +88,12 @@
   }
 }
 
+.form-direction_ways-title {
+  display: none;
+}
+
 .form-direction__ways-travel {
   .list-rules();
-  padding-left: 69px;
   border: 1px solid @border-item-add-plan;
   position: relative;
   border-radius: 10px;
@@ -165,7 +168,7 @@
   .form-direction__button {
     grid-column-start: 1;
     grid-column-end: 5;
-    margin-top: 27px;
+    margin-top: 24px;
     letter-spacing: 0.09em;
     margin-left: 35px;
     margin-right: 35px;
@@ -215,6 +218,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-direction {
+    padding-top: 63px;
+  }
+
   .form-direction__center {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
@@ -241,6 +248,7 @@
     left: 108px;
     width: 190px;
     border-radius: 10px 10px 0 0;
+    z-index: 10;
   }
 
   .form-direction__group {
@@ -270,7 +278,6 @@
   }
 
   .form-direction__ways-travel {
-    padding-left: 108px;
     padding-top: 24px;
   }
 
@@ -279,7 +286,7 @@
     position: absolute;
     top: -90px;
     left: 1000px;
-    padding-top: 12px;
+    padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 0 0 10px 10px;
   }

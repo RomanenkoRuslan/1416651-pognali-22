@@ -99,26 +99,24 @@
   .list-rules();
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 23px;
   text-transform: uppercase;
 }
 
 .feedback__item {
   display: flex;
   align-items: center;
-}
-
-.feedback__item::before {
-  content: url("../img/icon_telephone.svg");
-  padding: 13px 13px;
   border-radius: 50%;
   background-color: @background-svg;
   margin-right: 20px;
 }
 
-.feedback__item--email::before {
-  content: url("../img/icon_letter.svg");
-  padding: 8px 10px;
+.feedback__item-svg {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feedback__span {
@@ -155,7 +153,7 @@
   }
 
   .feedback__email-area {
-    margin-top: 54px;
+    margin-top: 52px;
     margin-left: 36px;
     margin-right: 36px;
   }
@@ -199,14 +197,14 @@
 
 @media (min-width: @desktop-width) {
   .feedback {
-    padding-bottom: 56px;
+    padding-bottom: 44px;
   }
 
   .feedback__contacts {
     display: flex;
     flex-direction: row;
-    margin-left: 235px;
-    margin-top: 58px;
+    margin-left: 226px;
+    margin-top: 43px;
   }
 
   .feedback__center {

@@ -24,6 +24,24 @@
   }
 }
 
+.add-plan__country-dropdown {
+  display: block;
+  top: -3px;
+  border: 1px solid @ideal-companion-input;
+  border-top: none;
+  width: 219px;
+  position: relative;
+  z-index: 30;
+}
+
+.add-plan__country-dropdown--close {
+  display: none;
+}
+
+.add-plan__alphabet {
+  margin-right: 0;
+}
+
 .add-plan__slider {
   .list-rules();
   display: flex;
@@ -215,6 +233,17 @@
   height: 218px;
 }
 
+.add-plan__delete {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: -5px;
+  background-image: url("../img/icons/button-delete.svg");
+  border: none;
+  border-radius: 50%;
+  left: 210px;
+}
+
 .add-plan__item {
   font-size: 14px;
   line-height: 18px;
@@ -276,29 +305,63 @@
   border: 1px solid @border-item-add-plan;
   padding-right: 40px;
   appearance: none;
-  background-image: url("../img/arrow-back.svg");
+  background-image: url("../img/icons/arrow-back.svg");
   background-repeat: no-repeat;
   background-position: 140px  center;
+
+  &:hover {
+    border-color: @checkbox-border;
+  }
+
+  &:active {
+    border-color: @basic-blue-light;
+  }
 
   &--select {
     width: 220px;
     background-position: 192px  center;
   }
 
+  &--opened {
+    margin-bottom: 0;
+    background-color: @basic-blue-light;
+    color: @white;
+    border-radius: 5px 5px 0 0;
+    background-image: none;
+  }
+
   &--add {
     width: 222px;
     background-position: 191px  center;
-    background-image: url("../img/icon_plus.svg");
+    background-image: url("../img/icons/icon_plus.svg");
     background-color: @background-form-direction;
   }
 }
 
-.add-plan__country-area {
-  position: relative;
+.add-plan__country-dropdown-button {
+  background-image: url("../img/icons/icon-close-dropdown.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  top: -25px;
+  left: 190px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .add-plan__flag {
-  content: "rfgdrfg";
+  content: "";
   width: 50px;
   height: 40px;
   background-image: url("../img/flag-czech-mobile.jpg");
@@ -335,7 +398,7 @@
   }
 
   &::after {
-    content: url("../img/direction.svg");
+    content: url("../img/icons/direction.svg");
     position: absolute;
     top: 43px;
     left: -6px;
@@ -353,7 +416,7 @@
   left: 163px;
 
   &::after {
-    content: url("../img/direction.svg");
+    content: url("../img/icons/direction.svg");
     position: absolute;
     top: 26px;
     left: 0;
@@ -364,22 +427,16 @@
   }
 }
 
-.add-plan__delete {
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  top: -5px;
-  background-image: url("../img/button-delete.svg");
-  border: none;
-  border-radius: 50%;
-  left: 210px;
-}
-
 .add-plan__country-letter-a-list {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 27px;
   color: @special-grey;
+  width: 197px;
+  border: 1px solid @ideal-companion-input;
   .list-rules();
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .add-plan__next-step {
@@ -405,7 +462,7 @@
   }
 
   &--first {
-    margin-top: 22px;
+    margin-top: 20px;
   }
 
   &--second {
@@ -457,7 +514,7 @@
   margin-right: 10px;
 
   &--bosnia::before {
-    content: url("../img/line.svg");
+    content: url("../img/icons/line.svg");
     position: absolute;
     top: 14px;
     left: -15px;
@@ -551,7 +608,30 @@
 
   &--plus {
     top: 44px;
-    right: 33px;
+    right: 23px;
+  }
+}
+
+.add-plan__button-svg {
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.add-plan__country-area {
+  position: relative;
+}
+
+.add-plan__country-area--opened {
+  .add-plan__round,
+  .add-plan__delete {
+    display: none;
   }
 }
 
@@ -564,6 +644,47 @@
   .add-plan__field {
     display: flex;
     flex-direction: column;
+  }
+
+  .add-plan__country-area {
+    position: relative;
+
+    &--first {
+      border-top: 1px solid @border-item-add-plan;
+      margin-top: 18px;
+      padding-top: 36px;
+      width: 535px;
+    }
+  }
+
+  .add-plan__country-dropdown {
+    top: -8px;
+    display: flex;
+    width: auto;
+    border: none;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    position: relative;
+
+    &--close {
+      display: none;
+    }
+  }
+
+  .add-plan__country-letter-a-list {
+    width: auto;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    border-left: 2px solid @border-item-add-plan;
+    padding-left: 25px;
+    padding-top: 35px;
+    padding-bottom: 53px;
+  }
+
+  .add-plan__country-dropdown-button {
+    left: 330px;
+    top: -35px;
+    transform: scale(2);
   }
 
   .add-plan__child {
@@ -592,7 +713,7 @@
   }
 
   .add-plan {
-    padding-top: 20px;
+    padding-top: 22px;
     padding-left: 35px;
     padding-bottom: 55px;
   }
@@ -739,6 +860,7 @@
   .add-plan__forward {
     transform: scale(2) rotate(180deg);
     position: relative;
+    left: -10px;
   }
 
   .add-plan__date-table {
@@ -774,7 +896,7 @@
     text-align: left;
 
     &::after {
-      content: url("../img/polygon.svg");
+      content: url("../img/icons/polygon.svg");
       position: absolute;
       top: 25px;
       right: 36px;
@@ -787,15 +909,6 @@
     &--third {
       width: 286px;
       margin-top: 43px;
-    }
-  }
-
-  .add-plan__country-area {
-    &--first {
-      border-top: 1px solid @border-item-add-plan;
-      margin-top: 18px;
-      padding-top: 36px;
-      width: 535px;
     }
   }
 
@@ -854,9 +967,20 @@
   .add-plan__delete {
     top: 30px;
     left: 513px;
-    background-image: url("../img/icon_close_point.svg");
+    border-radius: 0;
+    background-image: url("../img/icons/icon_close.svg");
+    background-repeat: no-repeat;
     background-color: transparent;
     transform: scale(1.2);
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
+    }
 
     &--bosnia {
       top: 65px;
@@ -889,11 +1013,11 @@
     font-size: 24px;
     line-height: 22px;
     text-transform: none;
-    margin-left: 78px;
+    margin-left: 80px;
     position: relative;
 
     &::before {
-      content: url("../img/polygon.svg");
+      content: url("../img/icons/polygon.svg");
       position: absolute;
       left: -35px;
       top: 2px;
@@ -918,7 +1042,7 @@
     }
 
     &--bosnia::before {
-      content: url("../img/line_country.svg");
+      content: url("../img/icons/line_country.svg");
       top: 65px;
       left: 520px;
     }
@@ -997,10 +1121,29 @@
     order: 3;
     margin-left: 0;
     margin-right: 94px;
+    position: relative;
+    left: 77px;
 
-    &--day::after {
-      display: none;
+    &--day {
+      left: 67px;
+
+      &::after {
+        display: none;
+      }
     }
+  }
+
+  .add-plan__country-dropdown {
+    width: 730px;
+  }
+
+  .add-plan__country-letter-a-list {
+    padding-top: 45px;
+    padding-bottom: 150px;
+  }
+
+  .add-plan__country-dropdown-button {
+    left: 695px;
   }
 
   .add-plan__details--wrap {
@@ -1108,10 +1251,10 @@
   }
 
   .add-plan__mounth-wrap {
-    margin-top: 15px;
-    margin-right: 160px;
+    margin-top: 16px;
+    margin-right: 155px;
     padding-left: 0;
-    padding-right: 5px;
+    padding-right: 0;
   }
 
   .add-plan__date-table {

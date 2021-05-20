@@ -13,8 +13,22 @@
   text-transform: uppercase;
   border: 1px solid @color-border;
 
+  &:hover {
+    outline: 1px solid @black;
+  }
+
+  &:active {
+    background-color: @basic-blue-light;
+    color: @white;
+  }
+
+  &--add-plan {
+    background-color: @white;
+    font-weight: bold;
+  }
+
   &--selected-add-plan {
-    color: @background-form-direction;
+    background-color: @border-catalog-title;
   }
 
   &--filter {
@@ -32,6 +46,14 @@
     margin-top: 14px;
     width: 385px;
     height: 420px;
+
+    &--add-plan {
+      width: 262px;
+      height: 346px;
+      margin-left: 27px;
+      margin-right: 78px;
+      margin-top: 35px;
+    }
   }
 
   .alphabet__cell {
@@ -46,6 +68,31 @@
     &--selected {
       background-color: @background-alphabet-cell;
       opacity: 1;
+    }
+
+    &--add-plan {
+      background-color: @white;
+      font-size: 20px;
+      line-height: 20px;
+      border: 2px solid @color-border;
+      opacity: 1;
+    }
+
+    &--selected-add-plan {
+      background-color: @basic-blue-light;
+      opacity: 1;
+      color: @white;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .alphabet {
+    &--add-plan {
+      width: 400px;
+      height: 450px;
+      border-collapse: separate;
+      border-spacing: 15px;
     }
   }
 }

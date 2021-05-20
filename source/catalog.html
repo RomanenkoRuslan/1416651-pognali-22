@@ -41,13 +41,27 @@
           <ul class="main-nav__contacts main-nav__contacts--form contacts-list">
             <li class="contacts-list__item">
               <a href="tel:+88005558628" class="contacts-list__tel">
-                <span class="contacts-list__svg-tel"></span>
-                <span class="contacts-list__item-area">8 800 555-86-28</span>
+                <span class="contacts-list__svg contacts-list__svg--tel">
+                  <svg class="contacts-list__svg-menu" width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_telephone"></use>
+                  </svg>
+                  <svg class="contacts-list__svg-menu-desktop" width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_call"></use>
+                  </svg>
+                </span>
+                <span class="contacts-list__item-area">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
-                <span class="contacts-list__svg-email"></span>
+                <span class="contacts-list__svg contacts-list__svg--email">
+                  <svg class="contacts-list__svg-menu" width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_letter"></use>
+                  </svg>
+                  <svg class="contacts-list__svg-menu-desktop" width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_mail"></use>
+                  </svg>
+                </span>
                 <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
               </a>
             </li>
@@ -56,14 +70,23 @@
             <a href="#" class="user-list__link user-list__link--catalog">авторизация</a>
           </div>
           <ul class="main-nav__socials socials">
-            <li class="main-nav__socials-item socials__item socials__item--facebook">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Фэйсбук</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+              </svg>
             </li>
-            <li class="main-nav__socials-item socials__item socials__item--vk">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Вконтакте</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </li>
-            <li class="main-nav__socials-item socials__item socials__item--instagram">
+            <li class="main-nav__socials-item socials__item">
               <span class="visually-hidden">Инстаграм</span>
+              <svg width="23" height="22">
+                <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+              </svg>
             </li>
           </ul>
           <h2 class="main-nav__title main-nav__title--catalog">Попутчики</h2>
@@ -513,16 +536,28 @@
               <h3 class="ideal-companion__item-title">транспорт:<button type="button" class="ideal-companion__button-turn ideal-companion__button-turn--opened"></button></h3>
               <ul class="ideal-companion__item-wrap ideal-companion__ways-travel ways-travel">
                 <li class="ideal-companion__ways-travel-item ways-travel__item--form ways-travel__item ways-travel__item--plane ways-travel__item--active">
-                  <span class="visually-hidden">На самолете</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_plane"></use>
+                  </svg>
+                  <span class="ideal-companion__ways-title">Авиаперелет</span>
                 </li>
                 <li class="ideal-companion__ways-travel-item ways-travel__item--form ways-travel__item ways-travel__item--bus ways-travel__item--active">
-                  <span class="visually-hidden">На автобусе</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                  </svg>
+                  <span class="ideal-companion__ways-title">Автотранспорт</span>
                 </li>
                 <li class="ideal-companion__ways-travel-item ways-travel__item--form ways-travel__item ways-travel__item--bicycle">
-                  <span class="visually-hidden">На велосипеде</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                  </svg>
+                  <span class="ideal-companion__ways-title">Велосипед</span>
                 </li>
                 <li class="ideal-companion__ways-travel-item ways-travel__item--form ways-travel__item ways-travel__item--run ways-travel__item--active">
-                  <span class="visually-hidden">Бегом</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_run"></use>
+                  </svg>
+                  <span class="ideal-companion__ways-title">Пешком</span>
                 </li>
               </ul>
             </li>
@@ -564,9 +599,11 @@
               </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Таня Фирсова</h3>
               <p class="catalog__like">
-                <svg class="catalog__like-icon catalog__like-icon--liked" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                  <use class="use" xlink:href="./img/sprite.svg#icon_heart"></use>
-                </svg>
+                <a href="#" class="catalog__like-wrap catalog__like-wrap--liked">
+                  <svg class="catalog__like-icon catalog__like-icon--liked" width="12" height="12">
+                    <use class="use" xlink:href="./img/sprite.svg#icon_heart"></use>
+                  </svg>
+                </a>
                 1,5 m</p>
               <p class="catalog__text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <div class="catalog__want-visit-area">
@@ -580,16 +617,28 @@
               <h4 class="catalog__title catalog__title--ways-travel">транспорт:</h4>
               <ul class="catalog__ways-travel ways-travel">
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--plane ways-travel__item--active">
-                  <span class="visually-hidden">На самолете</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_plane"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Авиаперелет</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bus">
-                  <span class="visually-hidden">На автобусе</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Автотранспорт</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bicycle">
-                  <span class="visually-hidden">На велосипеде</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Велосипед</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--run">
-                  <span class="visually-hidden">Бегом</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_run"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Пешком</span>
                 </li>
               </ul>
               <div class="catalog__level-wrap">
@@ -611,9 +660,11 @@
               </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Петя Демин</h3>
               <p class="catalog__like">
-                <svg class="catalog__like-icon" width="12" height="13">
-                  <use xlink:href="./img/sprite.svg#icon_heart"></use>
-                </svg>
+                <a href="#" class="catalog__like-wrap">
+                  <svg class="catalog__like-icon" width="15" height="13">
+                    <use class="lol" xlink:href="./img/sprite.svg#icon_heart"></use>
+                  </svg>
+                </a>
                 1500
               </p>
               <p class="catalog__text">#бургер #бар #футбол #концерт #крафт</p>
@@ -627,24 +678,36 @@
               <h4 class="catalog__title catalog__title--ways-travel">транспорт:</h4>
               <ul class="catalog__ways-travel ways-travel">
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--plane ways-travel__item--active">
-                  <span class="visually-hidden">На самолете</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_plane"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Авиаперелет</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bus ways-travel__item--active">
-                  <span class="visually-hidden">На автобусе</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Автотранспорт</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bicycle">
-                  <span class="visually-hidden">На велосипеде</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Велосипед</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--run ways-travel__item--active">
-                  <span class="visually-hidden">Бегом</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_run"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Пешком</span>
                 </li>
               </ul>
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
-                <p class="catalog____level level">
+                <p class="catalog__level level">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./img/mark-80-catalog-tablet.png 1x, ./img/mark-80-catalog-tablet@2x.png 2x">
-                    <img class="catalog____level-img" src="./img/mark-80-catalog.png" srcset="./img/mark-80-catalog@2x.png 2x"alt="Уровень пользователя">
+                    <img class="catalog__level-img" src="./img/mark-80-catalog.png" srcset="./img/mark-80-catalog@2x.png 2x"alt="Уровень пользователя">
                   </picture>
                   <span class="catalog__level-number level-number visually-hidden">80 уровень</span>
                 </p>
@@ -658,9 +721,11 @@
               </picture>
               <h3 class="catalog__user-name catalog__user-name--offline">Марк Смолов</h3>
               <p class="catalog__like">
-                <svg class="catalog__like-icon" width="12" height="13">
-                  <use xlink:href="./img/sprite.svg#icon_heart"></use>
-                </svg>
+                <a href="#" class="catalog__like-wrap">
+                  <svg class="catalog__like-icon" width="15" height="13">
+                    <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                  </svg>
+                </a>
                 170
               </p>
               <p class="catalog__text">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -675,24 +740,36 @@
               <h4 class="catalog__title catalog__title--ways-travel">транспорт:</h4>
               <ul class="catalog__ways-travel ways-travel">
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--plane ways-travel__item--active">
-                  <span class="visually-hidden">На самолете</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_plane"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Авиаперелет</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bus">
-                  <span class="visually-hidden">На автобусе</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Автотранспорт</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bicycle ways-travel__item--active">
-                  <span class="visually-hidden">На велосипеде</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Велосипед</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--run">
-                  <span class="visually-hidden">Бегом</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_run"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Пешком</span>
                 </li>
               </ul>
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
-                <p class="catalog____level level">
+                <p class="catalog__level level">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./img/mark-25-catalog-tablet.png 1x, ./img/mark-25-catalog-tablet@2x.png 2x">
-                    <img class="catalog____level-img" src="./img/mark-25-catalog.png" srcset="./img/mark-25-catalog@2x.png 2x"alt="Уровень пользователя">
+                    <img class="catalog__level-img" src="./img/mark-25-catalog.png" srcset="./img/mark-25-catalog@2x.png 2x"alt="Уровень пользователя">
                   </picture>
                   <span class="catalog__level-number level-number visually-hidden">25 уровень</span>
                 </p>
@@ -706,9 +783,11 @@
               </picture>
               <h3 class="catalog__user-name catalog__user-name--online">Лариса Роговая</h3>
               <p class="catalog__like">
-                <svg class="catalog__like-icon" width="12" height="13">
-                  <use xlink:href="./img/sprite.svg#icon_heart"></use>
-                </svg>
+                <a href="#" class="catalog__like-wrap">
+                  <svg class="catalog__like-icon" width="15" height="13">
+                    <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                  </svg>
+                </a>
                 23
               </p>
               <p class="catalog__text">#образование #карьера #учеба #линкедин</p>
@@ -722,24 +801,36 @@
               <h4 class="catalog__title catalog__title--ways-travel">транспорт:</h4>
               <ul class="catalog__ways-travel ways-travel">
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--plane ways-travel__item--active">
-                  <span class="visually-hidden">На самолете</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_plane"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Авиаперелет</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bus ways-travel__item--active">
-                  <span class="visually-hidden">На автобусе</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Автотранспорт</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--bicycle">
-                  <span class="visually-hidden">На велосипеде</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Велосипед</span>
                 </li>
                 <li class="catalog__ways-travel-item ways-travel__item ways-travel__item--catalog ways-travel__item--run">
-                  <span class="visually-hidden">Бегом</span>
+                  <svg width="23" height="22">
+                    <use xlink:href="./img/sprite.svg#icon_run"></use>
+                  </svg>
+                  <span class="catalog__ways-title">Пешком</span>
                 </li>
               </ul>
               <div class="catalog__level-wrap">
                 <h4 class="catalog__title catalog__title--level">левел:</h4>
-                <p class="catalog____level level">
+                <p class="catalog__level level">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./img/mark-50-catalog-tablet.png 1x, ./img/mark-50-catalog-tablet@2x.png 2x">
-                    <img class="catalog____level-img" src="./img/mark-50-catalog.png" srcset="./img/mark-50-catalog@2x.png 2x"alt="Уровень пользователя">
+                    <img class="catalog__level-img" src="./img/mark-50-catalog.png" srcset="./img/mark-50-catalog@2x.png 2x"alt="Уровень пользователя">
                   </picture>
                   <span class="catalog__level-number level-number visually-hidden">50 уровень</span>
                 </p>
@@ -777,56 +868,34 @@
             <img src="./img/logo-mobile-black.png" srcset="./img/logo-mobile-black@2x.png 2x" alt="Логотип сайта">
           </picture>
         </a>
-        <ul class="page-footer__socials socials">
-          <li class="socials__item socials__item--footer-facebook socials__item--facebook">
+        <div class="page-footer__socials socials">
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Фэйсбук</span>
-          </li>
-          <li class="socials__item socials__item--footer-vk socials__item--vk">
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Вконтакте</span>
-          </li>
-          <li class="socials__item socials__item--footer-instagram socials__item--instagram">
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__item socials__item--footer">
             <span class="visually-hidden">Инстаграм</span>
-          </li>
-        </ul>
+            <svg class="socials__item-svg" width="23" height="22">
+              <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+            </svg>
+          </a>
+        </div>
         <div class="page-footer__copy">
           <p class="page-footer__text">Разработано</p>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo-academy">
-            <img src="img/htmlacademy.svg" alt="Лого HTML Academy" class="page-footer__img">
+            <img src="img/icons/htmlacademy.svg" alt="Лого HTML Academy" class="page-footer__img">
           </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-    <script>
-      var filterCountry = document.querySelector('.filter-country');
-      var filterCountryToggle = document.querySelector('.filter-country__toggle');
-
-      filterCountry.classList.remove('filter-country--nojs');
-
-      filterCountryToggle.addEventListener('click', function() {
-        if (filterCountry.classList.contains('filter-country--closed')) {
-          filterCountry.classList.remove('filter-country--closed');
-          filterCountry.classList.add('filter-country--opened');
-        } else {
-          filterCountry.classList.add('filter-country--closed');
-          filterCountry.classList.remove('filter-country--opened');
-        }
-      });
-    </script>
+    <script href="#" src="./js/app.js"></script>
   </body>
 </html>

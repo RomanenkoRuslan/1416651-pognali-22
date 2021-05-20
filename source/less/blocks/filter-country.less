@@ -1,7 +1,7 @@
 .filter-country {
   background-color: @background-filter-country;
   padding-top: 20px;
-  font-family: "Blogger Sans", sans-serif;
+  font-family: "Blogger Sans", "Roboto", sans-serif;
   border-radius: 0 0 20px 20px;
 
   &--closed {
@@ -17,7 +17,7 @@
     }
 
     .filter-country__toggle {
-      background-image: url("../img/filter_expand.svg");
+      background-image: url("../img/icons/filter_expand.svg");
       height: 12px;
     }
   }
@@ -53,7 +53,7 @@
 .filter-country__toggle {
   width: 20px;
   height: 30px;
-  background-image: url("../img/icon_close.svg");
+  background-image: url("../img/icons/icon_close.svg");
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -156,7 +156,7 @@
   width: 270px;
   padding-left: 8px;
   border-radius: 20px;
-  font-family: "Blogger Sans", sans-serif;
+  font-family: "Blogger Sans", "Roboto", sans-serif;
 
   &:hover {
     background-color: @filter-country-turn-hover;
@@ -312,12 +312,19 @@
     .filter-country__turn {
       width: 100%;
       margin-top: 67px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 34px;
+      padding-bottom: 39px;
       display: block;
       font-size: 20px;
       line-height: 20px;
     }
+  }
+
+  .filter-country__turn-svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 5px;
   }
 
   .filter-country__continents-item {

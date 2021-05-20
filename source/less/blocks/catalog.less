@@ -48,6 +48,10 @@
   }
 }
 
+.catalog__ways-title {
+  display: none;
+}
+
 .catalog__like {
   font-weight: bold;
   font-size: 14px;
@@ -61,19 +65,36 @@
   left: 105px;
 }
 
-.catalog__like-icon {
+.catalog__like-wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   position: absolute;
   left: -40px;
   top: -10px;
-  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: @background-filter-country;
-  border-radius: 50%;
 
   &--liked {
     background-color: @background-icon-like;
+  }
+}
 
+.catalog__like-icon {
+  stroke: black;
+  fill: none;
+  stroke-opacity: 0.3;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &--liked {
     .use {
       stroke: @fill-icon-like;
+      fill: @fill-icon-like;
     }
   }
 }
@@ -145,7 +166,7 @@
   color: @basic-blue;
   background-color: @basic-yellow;
   display: block;
-  margin-top: 22px;
+  margin-top: 20px;
   width: 230px;
   padding-top: 13px;
   padding-bottom: 10px;
@@ -214,7 +235,7 @@
   margin-top: 19px;
   background-color: @white;
   display: block;
-  background-image: url("../img/polygon.svg");
+  background-image: url("../img/icons/polygon.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -270,6 +291,7 @@
   .list-rules();
   margin-top: 18px;
   margin-left: 2px;
+  justify-content: left;
 }
 
 .catalog__level-wrap {
@@ -278,11 +300,12 @@
   left: 205px;
 }
 
-.catalog____level {
+.catalog__level {
   margin-top: 10px;
 }
 
 .catalog__avatar {
+  display: block;
   width: 70px;
   border-radius: 50%;
   margin-top: 2px;
@@ -334,7 +357,7 @@
 
   .catalog__item {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 190px auto;
     grid-template-rows: repeat(3, auto);
     align-items: flex-start;
     padding-top: 33px;
@@ -351,7 +374,7 @@
     margin-top: 16px;
   }
 
-  .catalog____level-img {
+  .catalog__level-img {
     position: relative;
     left: -10px;
     margin-bottom: 12px;
@@ -409,7 +432,7 @@
     margin-top: 48px;
     margin-bottom: 0;
     height: 54px;
-    margin-left: 15px;
+    margin-left: 36px;
   }
 
   .catalog__call {
@@ -422,8 +445,8 @@
     width: 147px;
     padding-top: 16px;
     padding-bottom: 14px;
-    margin-top: 140px;
-    margin-left: 8px;
+    margin-top: 141px;
+    margin-left: 29px;
   }
 
   .catalog__like {
@@ -432,16 +455,21 @@
     grid-column-start: 2;
     grid-column-end: 3;
     top: 157px;
-    left: 213px;
+    left: 235px;
     font-size: 20px;
     line-height: 20px;
   }
 
-  .catalog__like-icon {
-    width: 32px;
-    height: 32px;
+  .catalog__like-wrap {
+    width: 50px;
+    height: 50px;
     top: -15px;
     left: -55px;
+  }
+
+  .catalog__like-icon {
+    width: 20px;
+    height: 18px;
   }
 
   .catalog__level-wrap {
@@ -459,7 +487,7 @@
     justify-self: right;
     margin-top: 0;
     margin-left: 0;
-    margin-right: 35px;
+    margin-right: 45px;
   }
 
   .country-item {
@@ -477,6 +505,7 @@
     margin-top: 3px;
     position: relative;
     display: flex;
+    margin-left: 33px;
 
     &::after {
       top: 0;
@@ -523,13 +552,17 @@
   }
 
   .catalog__avatar {
+    border-radius: 20px 0 0 20px;
     margin-top: 0;
     width: 285px;
   }
 
   .catalog__user-name {
     margin-top: 50px;
-    margin-left: 62px;
+    margin-left: 10px;
+    gap: 20px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 
   .catalog__text {
@@ -543,7 +576,7 @@
   }
 
   .catalog__like {
-    margin-left: 48px;
+    margin-left: 25px;
     margin-top: 45px;
   }
 
@@ -553,10 +586,10 @@
     padding-left: 0;
     display: grid;
     align-items: flex-start;
-    grid-template-columns: 285px repeat(2, auto);
+    grid-template-columns: 285px 390px auto;
     grid-template-rows: repeat(3, auto);
     padding-bottom: 0;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   .catalog__want-visit-area {
@@ -588,12 +621,15 @@
     grid-row-end: 4;
     grid-column-start: 5;
     grid-column-end: 6;
+    margin-bottom: 0;
   }
 
   .catalog__ways-travel {
     margin-top: 195px;
+    margin-right: 0;
     justify-self: left;
     flex-direction: row;
+    gap: 13px;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
@@ -601,11 +637,12 @@
   }
 
   .catalog__level-img {
-    margin-bottom: 25px;
+    margin-bottom: 38px;
+    margin-left: 3px;
   }
 
   .catalog__show {
-    margin-top: 56px;
+    margin-top: 60px;
     margin-right: 75px;
   }
 

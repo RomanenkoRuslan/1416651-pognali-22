@@ -10,7 +10,12 @@
 
   &--feedback {
     color: @basic-yellow;
+    margin-bottom: 6px;
   }
+}
+
+.contacts-list__svg-menu-desktop {
+  display: none;
 }
 
 .contacts-list__tel,
@@ -19,6 +24,7 @@
   color: @basic-blue-dark;
   position: relative;
   display: flex;
+  align-items: center;
 
   &--feedback {
     color: @basic-yellow;
@@ -33,35 +39,41 @@
   }
 }
 
-.contacts-list__svg-tel {
-  content: url("../img/icon_call.svg");
-  text-align: center;
-  padding: 11px 11px;
+.contacts-list__svg {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: @special-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
-    background-color: @svg-tel-hover;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.contacts-list__svg-email {
-  content: url("../img/icon_mail.svg");
-  text-align: center;
-  padding: 12px 11px;
-  border-radius: 50%;
-  background-color: @special-yellow-dark;
-
-  &:hover {
+  &--tel {
     background-color: @special-orange;
+
+    &:hover {
+      background-color: @svg-tel-hover;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  &:active {
-    opacity: 0.3;
+  &--email {
+    background-color: @special-yellow-dark;
+
+    &:hover {
+      background-color: @special-orange;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--feedback {
+    background-color: @background-svg;
+    margin-right: 20px;
   }
 }
 
@@ -70,9 +82,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts-list__svg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .contacts-list__svg-item {
+    width: 27px;
+    height: 26px;
+  }
+
   .contacts-list__item {
     font-size: 28px;
     line-height: 28px;
+
+    &--feedback {
+      margin-bottom: 0;
+    }
   }
 
   .contacts-list__item-area {
@@ -81,17 +107,30 @@
 }
 
 @media (min-width: @desktop-width) {
-  .contacts-list__svg-tel {
-    padding: 16px;
-  }
-
-  .contacts-list__svg-email {
-    padding: 16px;
-  }
-
   .contacts-list__item {
     &--feedback {
-      margin-right: 118px;
+      margin-right: 110px;
     }
+  }
+
+  .contacts-list__svg {
+    &--feedback {
+      margin-right: 30px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .contacts-list__svg-item {
+    width: 36px;
+    height: 34px;
+  }
+
+  .contacts-list__svg-menu {
+    display: none;
+  }
+
+  .contacts-list__svg-menu-desktop {
+    display: block;
   }
 }

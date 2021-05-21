@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page__body">
+  <body class="body">
     <header class="page-header page-header--form">
       <nav class="main-nav main-nav--closed main-nav--form main-nav--nojs">
         <div class="main-nav__center center">
-          <a class="main-nav__logo">
+          <a href="index.html" class="main-nav__logo">
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/logo-desktop.png 1x, ./img/logo-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/logo-tablet.png 1x, ./img/logo-tablet@2x.png 2x">
               <img src="./img/logo-mobile.png" srcset="./img/logo-mobile@2x.png 2x" alt="Логотип сайта">
             </picture>
           </a>
-          <a class="main-nav__logo--black">
+          <a class="main-nav__logo-black">
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
@@ -41,7 +41,7 @@
           <ul class="main-nav__contacts main-nav__contacts--form contacts-list">
             <li class="contacts-list__item">
               <a href="tel:+88005558628" class="contacts-list__tel">
-                <span class="contacts-list__svg contacts-list__svg--tel">
+                <span class="main-nav__svg contacts-list__svg contacts-list__svg--tel">
                   <svg class="contacts-list__svg-menu" width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                   </svg>
@@ -49,12 +49,12 @@
                     <use xlink:href="./img/sprite.svg#icon_call"></use>
                   </svg>
                 </span>
-                <span class="contacts-list__item-area">8 800 555-86-28</span>
+                <span class="main-nav__item-area contacts-list__item-area">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
-                <span class="contacts-list__svg contacts-list__svg--email">
+                <span class="main-nav__svg contacts-list__svg contacts-list__svg--email">
                   <svg class="contacts-list__svg-menu" width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_letter"></use>
                   </svg>
@@ -62,12 +62,12 @@
                     <use xlink:href="./img/sprite.svg#icon_mail"></use>
                   </svg>
                 </span>
-                <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
+                <span class="main-nav__item-area contacts-list__item-area">mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
           <div class="main-nav__list-user-list main-nav__list-user-list--form user-list user-list--form">
-            <a href="#" class="user-list__link user-list__link--form">авторизация</a>
+            <a href="#" class="main-nav__link main-nav__link--form user-list__link user-list__link--form">авторизация</a>
           </div>
           <ul class="main-nav__socials socials">
             <li class="main-nav__socials-item socials__item">
@@ -114,31 +114,31 @@
             <ul class="form-direction__ways-travel ways-travel">
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--plane
               ways-travel__item--form">
-                <svg class="form-direction_svg" width="23" height="22">
+                <svg class="form-direction__svg" width="23" height="22">
                   <use xlink:href="./img/sprite.svg#icon_plane"></use>
                 </svg>
-                <span class="form-direction_ways-title">Авиаперелет</span>
+                <span class="form-direction__ways-title">Авиаперелет</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--bus
               ways-travel__item--form">
-                <svg class="form-direction_svg" width="23" height="22">
+                <svg class="form-direction__svg" width="23" height="22">
                   <use xlink:href="./img/sprite.svg#icon_bus"></use>
                 </svg>
-                <span class="form-direction_ways-title">Автотранспорт</span>
+                <span class="form-direction__ways-title">Автотранспорт</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--bicycle
               ways-travel__item--form">
-                <svg class="form-direction_svg" width="23" height="22" opacity="0.2">
+                <svg class="form-direction__svg" width="23" height="22" opacity="0.2">
                   <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                 </svg>
-                <span class="form-direction_ways-title">Велосипед</span>
+                <span class="form-direction__ways-title">Велосипед</span>
               </li>
               <li class="form-direction__ways-travel__item ways-travel__item ways-travel__item--run
               ways-travel__item--form">
-                <svg class="form-direction_svg" width="23" height="22">
+                <svg class="form-direction__svg" width="23" height="22">
                   <use xlink:href="./img/sprite.svg#icon_run"></use>
                 </svg>
-                <span class="form-direction_ways-title">Пешком</span>
+                <span class="form-direction__ways-title">Пешком</span>
               </li>
             </ul>
           </div>
@@ -204,12 +204,14 @@
                   <li class="add-plan__navigation-item">Развлечения</li>
                 </ul>
               </div>
-              <fieldset class="add-plan__field add-plan__details--wrap">
+              <fieldset class="add-plan__field">
                 <div class="add-plan__details">
-                  <label class="add-plan__title-counter">
+                  <div class="add-plan__title-counter">
                     Ищу попутчиков:
                     <span class="add-plan__title-measure">Чел.</span>
-                    <input class="add-plan__counter" type="number" min="1" max="10" value="2">
+                    <label>
+                      <input class="add-plan__counter" type="number" min="1" max="10" value="2">
+                    </label>
                     <button class="add-plan__button add-plan__button--minus">
                       <svg class="add-plan__button-svg" width="14" height="2">
                         <use xlink:href="./img/sprite.svg#minus"></use>
@@ -220,13 +222,15 @@
                         <use xlink:href="./img/sprite.svg#plus"></use>
                       </svg>
                     </button>
-                  </label>
+                  </div>
                 </div>
                 <div class="add-plan__details add-plan__details--measure">
-                  <label class="add-plan__title-counter add-plan__title-counter--day">
+                  <div class="add-plan__title-counter add-plan__title-counter--day">
                     длительность:
                     <span class="add-plan__title-measure add-plan__title-measure--day">дн.</span><br>
-                    <input class="add-plan__counter" type="number" min="1" max="100" value="3">
+                    <label>
+                      <input class="add-plan__counter" type="number" min="1" max="100" value="3">
+                    </label>
                     <button class="add-plan__button add-plan__button--minus add-plan__button--second">
                       <svg class="add-plan__button-svg" width="14" height="2">
                         <use xlink:href="./img/sprite.svg#minus"></use>
@@ -237,7 +241,7 @@
                         <use xlink:href="./img/sprite.svg#plus"></use>
                       </svg>
                     </button>
-                  </label>
+                  </div>
                 </div>
                 <label class="add-plan__child checkbox">
                   <input class="add-plan__child-input checkbox__input" type="checkbox" checked>
@@ -261,13 +265,13 @@
                 </div>
                 <table class="add-plan__date-table">
                   <tr class="add-plan__days-week">
-                    <th class="add-plan__item add-plan__item--days-week">п<span class="add-plan__item--full">н</span></th>
-                    <th class="add-plan__item add-plan__item--days-week">в<span class="add-plan__item--full">т</span></th>
-                    <th class="add-plan__item add-plan__item--days-week">с<span class="add-plan__item--full">р</span></th>
-                    <th class="add-plan__item add-plan__item--days-week">ч<span class="add-plan__item--full">т</span></th>
-                    <th class="add-plan__item add-plan__item--days-week">п<span class="add-plan__item--full">т</span></th>
-                    <th class="add-plan__item add-plan__item--days-week add-plan__item--days-weekends">с<span class="add-plan__item--full">б</span></th>
-                    <th class="add-plan__item add-plan__item--days-week add-plan__item--days-weekends">в<span class="add-plan__item--full">с</span></th>
+                    <th class="add-plan__item add-plan__item--days-week">п<span class="add-plan__full-title">н</span></th>
+                    <th class="add-plan__item add-plan__item--days-week">в<span class="add-plan__full-title">т</span></th>
+                    <th class="add-plan__item add-plan__item--days-week">с<span class="add-plan__full-title">р</span></th>
+                    <th class="add-plan__item add-plan__item--days-week">ч<span class="add-plan__full-title">т</span></th>
+                    <th class="add-plan__item add-plan__item--days-week">п<span class="add-plan__full-title">т</span></th>
+                    <th class="add-plan__item add-plan__item--days-week add-plan__item--days-weekends">с<span class="add-plan__full-title">б</span></th>
+                    <th class="add-plan__item add-plan__item--days-week add-plan__item--days-weekends">в<span class="add-plan__full-title">с</span></th>
                   </tr>
                   <tr class="add-plan__week">
                     <td class="add-plan__item add-plan__item--past-days">23</td>
@@ -490,7 +494,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__center center">
-        <a class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
             <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">

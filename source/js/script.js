@@ -38,19 +38,19 @@ if (document.querySelector(".add-profile__business")) {
 
   popupLink.addEventListener("click", (evt) => {
     evt.preventDefault();
-    popup.classList.remove('popup-business-rates-show');
+    popup.classList.remove('popup-business-rates--show');
   })
 
   closeButton.addEventListener("click", (evt) => {
     evt.preventDefault();
-    popup.classList.add("popup-business-rates-show");
+    popup.classList.add("popup-business-rates--show");
   });
 
   window.addEventListener("keydown", (evt) => {
     if (evt.keyCode === 27) {
-      if (!popup.classList.contains("popup-business-rates-show")) {
+      if (!popup.classList.contains("popup-business-rates--show")) {
         evt.preventDefault();
-        popup.classList.add("popup-business-rates-show");
+        popup.classList.add("popup-business-rates--show");
       }
     }
   });

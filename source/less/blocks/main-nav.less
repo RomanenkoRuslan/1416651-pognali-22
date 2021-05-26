@@ -36,7 +36,7 @@
   display: none;
 }
 
-.main-nav__link {
+.main-nav__link-back {
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
@@ -83,12 +83,12 @@
     }
 
     .main-nav__contacts--form,
-    .user-list__link--form,
-    .user-list__link--catalog {
+    .main-nav__list-user-list--form,
+    .main-nav__list-user-list--catalog {
       display: none;
     }
 
-    .main-nav__logo--black {
+    .main-nav__logo-black {
       display: none;
     }
   }
@@ -136,19 +136,14 @@
 
     .main-nav__contacts {
       flex-direction: column;
-      margin-top: 62px;
+      margin-top: 37px;
       order: 3;
       margin-left: 25px;
     }
 
-    .user-list__link {
+    .main-nav__link {
       padding: 15px 80px;
       padding-top: 13px;
-    }
-
-    .contacts-list {
-      margin-top: 37px;
-      flex-direction: column;
     }
 
     .main-nav__socials {
@@ -159,7 +154,7 @@
       order: 5;
     }
 
-    .contacts-list__svg {
+    .main-nav__svg {
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -171,7 +166,7 @@
       right: 25px;
     }
 
-    .contacts-list__item-area {
+    .main-nav__item-area {
       display: block;
       text-transform: uppercase;
     }
@@ -184,7 +179,7 @@
       display: none;
     }
 
-    .main-nav__logo--black {
+    .main-nav__logo-black {
       display: block;
       margin-top: 6px;
     }
@@ -277,12 +272,12 @@
         }
       }
 
-      .user-list__link--form {
+      .main-nav__link--form {
         display: block;
         left: 90px;
       }
 
-      .user-list__link--catalog {
+      .main-nav__link--catalog {
         display: block;
         left: 90px;
         margin-top: 9px;
@@ -305,7 +300,7 @@
         left: 300px;
       }
 
-      .main-nav__logo--black {
+      .main-nav__logo-black {
         margin-right: 50px;
       }
 
@@ -314,7 +309,7 @@
         top: 0;
       }
 
-      .user-list__link {
+      .main-nav__link {
         padding: 15px 31px;
         padding-top: 13px;
         font-weight: normal;
@@ -348,22 +343,10 @@
         margin-top: 147px;
         margin-left: 82px;
       }
-
-      .contacts-list__svg-tel {
-        padding: 19px 19px;
-        width: 30px;
-        height: 30px;
-      }
-
-      .contacts-list__svg-email {
-        padding: 17px 17px;
-        width: 35px;
-        height: 35px;
-      }
     }
   }
 
-  .main-nav__link {
+  .main-nav__link-back {
     display: block;
     width: 120px;
   }
@@ -411,7 +394,7 @@
   }
 
   .main-nav__logo,
-  .main-nav__logo--black {
+  .main-nav__logo-black {
     order: -15;
   }
 
@@ -454,7 +437,7 @@
     padding-top: 35px;
     background-color: @basic-blue;
 
-    .contacts-list__svg {
+    .main-nav__svg {
       width: 50px;
       height: 50px;
     }
@@ -507,7 +490,7 @@
         }
       }
 
-      .user-list__link {
+      .main-nav__link {
         margin-top: 0;
       }
 
@@ -581,10 +564,5 @@
     grid-row-end: 2;
     margin-left: 152px;
     margin-top: 25px;
-  }
-
-  .promo__blockquote {
-    grid-column-start: 3;
-    grid-column-end: 5;
   }
 }

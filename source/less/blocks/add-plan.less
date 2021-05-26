@@ -150,7 +150,7 @@
   padding-bottom: 12px;
   border: 1px solid @border-item-add-plan;
   border-radius: 3px;
-  width: 100%;
+  width: 200px;
   text-align: center;
   padding-left: 15px;
   font-weight: bold;
@@ -282,10 +282,10 @@
   &--today {
     border: 2px solid @color-weekends;
   }
+}
 
-  &--full {
-    display: none;
-  }
+.add-plan__full-title {
+  display: none;
 }
 
 .add-plan__country {
@@ -637,14 +637,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .add-plan__details--wrap {
-    width: 540px;
-    margin-top: 40px;
-  }
-
   .add-plan__field {
     display: flex;
     flex-direction: column;
+    width: 540px;
+    margin-top: 40px;
   }
 
   .add-plan__country-area {
@@ -814,6 +811,7 @@
   }
 
   .add-plan__counter {
+    width: 530px;
     margin-top: 26px;
     font-size: 20px;
     line-height: 20px;
@@ -874,14 +872,14 @@
     font-size: 18px;
     line-height: 18px;
 
-    &--full {
-      display: inline-block;
-      text-transform: lowercase;
-    }
-
     &--days-week {
       height: 35px;
     }
+  }
+
+  .add-plan__full-title {
+    display: inline-block;
+    text-transform: lowercase;
   }
 
   .add-plan__next-step {
@@ -1147,7 +1145,7 @@
     left: 695px;
   }
 
-  .add-plan__details--wrap {
+  .add-plan__field {
     width: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1274,7 +1272,7 @@
     &:hover {
       outline: 4px solid @color-weekends;
       z-index: 10;
-      border: 2px solid @color-weekends;
+      border: 1px solid @color-weekends;
     }
 
     &--days-week {

@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page__body">
+  <body class="body">
+    <div class="visually-hidden">
+      <include src="source/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__center center">
@@ -17,7 +23,7 @@
               <img src="./img/logo-mobile.png" srcset="./img/logo-mobile@2x.png 2x" alt="Логотип сайта">
             </picture>
           </a>
-          <a class="main-nav__logo--black">
+          <a class="main-nav__logo-black">
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/logo-pognali-desktop-black.png 1x, ./img/logo-desktop-black@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/logo-pognali-tablet-black.png 1x, ./img/logo-tablet-black@2x.png 2x">
@@ -41,7 +47,7 @@
           <ul class="main-nav__contacts contacts-list">
             <li class="contacts-list__item">
               <a href="tel:+88005558628" class="contacts-list__tel">
-                <span class="contacts-list__svg contacts-list__svg--tel">
+                <span class="main-nav__svg contacts-list__svg contacts-list__svg--tel">
                   <svg class="contacts-list__svg-menu" width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                   </svg>
@@ -49,12 +55,12 @@
                     <use xlink:href="./img/sprite.svg#icon_call"></use>
                   </svg>
                 </span>
-                <span class="contacts-list__item-area">8 800 555-86-28</span>
+                <span class="main-nav__item-area contacts-list__item-area">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">
-                <span class="contacts-list__svg contacts-list__svg--email">
+                <span class="main-nav__svg contacts-list__svg contacts-list__svg--email">
                   <svg class="contacts-list__svg-menu" width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_letter"></use>
                   </svg>
@@ -62,12 +68,12 @@
                     <use xlink:href="./img/sprite.svg#icon_mail"></use>
                   </svg>
                 </span>
-                <span class="contacts-list__item-area">mail@htmlacademy.ru</span>
+                <span class="main-nav__item-area contacts-list__item-area">mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
           <div class="main-nav__list-user-list user-list">
-            <a href="#" class="user-list__link">Авторизация</a>
+            <a href="#" class="main-nav__link user-list__link">Авторизация</a>
           </div>
           <ul class="main-nav__socials socials">
             <li class="main-nav__socials-item socials__item">
@@ -91,7 +97,6 @@
           </ul>
         </div>
       </nav>
-      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Сайт о путешествии с попутчиками</h1>
@@ -176,7 +181,7 @@
             ><li class="direction__item">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/thailand-tablet.png 1x, img/thailand-tablet@2x.png 2x">
-                <img class="direction__img" src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.png 2x">
+                <img class="direction__img" alt="Фотография Тайланда" src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.png 2x">
               </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--thailand">Таиланд</h3>
@@ -192,7 +197,7 @@
             ><li class="direction__item direction__item--france">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/france-tablet.png 1x, img/france-tablet@2x.png 2x">
-                <img class="direction__img" src="img/france-mobile.jpg" srcset="img/france-mobile@2x.png 2x">
+                <img class="direction__img" alt="Фотография Франции" src="img/france-mobile.jpg" srcset="img/france-mobile@2x.png 2x">
               </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--france">Франция</h3>
@@ -208,7 +213,7 @@
             ><li class="direction__item direction__item--czech">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/czech-tablet.png 1x, img/czech-tablet@2x.png 2x">
-                <img class="direction__img" src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.png 2x">
+                <img class="direction__img" alt="Фотография Чехии" src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.png 2x">
               </picture>
               <div class="direction__info">
                 <h3 class="direction__country direction__country--czech">Чехия</h3>
@@ -244,9 +249,9 @@
           <ul class="fellow-travelers__list">
             <li class="fellow-travelers__item">
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.webp 1x, img/firsova-avatar-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/firsova-avatar.webp 1x, img/firsova-avatar@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-avatar-tablet.png 1x, img/firsova-avatar-tablet@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-avatar-tablet-index.webp 1x, img/firsova-avatar-tablet-index@2x.webp 2x">
+                <source type="image/webp" srcset="img/firsova-avatar.png.webp 1x, img/firsova-avatar.png@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-avatar-tablet-index.png 1x, img/firsova-avatar-tablet-index@2x.png 2x">
                 <img class="fellow-travelers__img" src="img/firsova-avatar.png" srcset="img/firsova-avatar@2x.png 2x" alt="Фотография пользователя">
               </picture>
               <p class="fellow-travelers__level">
@@ -260,38 +265,38 @@
               </ul>
               <h3 class="fellow-travelers__user-name">Таня Фирсова</h3>
               <p class="fellow-travelers__hobbies">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <ul class="fellow-travelers__ways-travel-list">
+              <ul class="fellow-travelers__ways-travel-list ways-travel">
                 <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--plane ways-travel__item--active">
                   <svg width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_plane"></use>
                   </svg>
-                  <span class="fellow-travelers__ways-title">Авиаперелет</span>
+                  <span class="ways-travel__title">Авиаперелет</span>
                 </li>
                 <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--bus">
                   <svg width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_bus"></use>
                   </svg>
-                  <span class="fellow-travelers__ways-title">Автотранспорт</span>
+                  <span class="ways-travel__title">Автотранспорт</span>
                 </li>
                 <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--bicycle">
                   <svg width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                   </svg>
-                  <span class="fellow-travelers__ways-title">Велосипед</span>
+                  <span class="ways-travel__title">Велосипед</span>
                 </li>
                 <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--run">
                   <svg width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_run"></use>
                   </svg>
-                  <span class="fellow-travelers__ways-title">Пешком</span>
+                  <span class="ways-travel__title">Пешком</span>
                 </li>
               </ul>
             </li>
             <li class="fellow-travelers__item">
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-avatar-tablet.webp 1x, img/demin-avatar-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-avatar-tablet-index.webp 1x, img/demin-avatar-tablet-index@2x.webp 2x">
                 <source type="image/webp" srcset="img/demin-avatar.webp 1x, img/demin-avatar@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-avatar-tablet.png 1x, img/demin-avatar-tablet@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-avatar-tablet-index.png 1x, img/ddemin-avatar-tablet-index@2x.png 2x">
                 <img class="fellow-travelers__img" width="270" height="270" src="img/demin-avatar.png" srcset="img/demin-avatar@2x.png 2x" alt="Фотография пользователя">
               </picture>
               <p class="fellow-travelers__level">
@@ -304,7 +309,7 @@
               </ul>
               <h3 class="fellow-travelers__user-name fellow-travelers__user-name--online">Петя Демин</h3>
               <p class="fellow-travelers__hobbies">#бургер #бар #футбол #концерт #крафт</p>
-              <ul class="fellow-travelers__ways-travel-list">
+              <ul class="fellow-travelers__ways-travel-list ways-travel">
                 <li class="fellow-travelers__ways-travel__item ways-travel__item ways-travel__item--plane ways-travel__item--active">
                   <svg width="23" height="22">
                     <use xlink:href="./img/sprite.svg#icon_plane"></use>
@@ -344,7 +349,7 @@
         <div class="add-profile__center center">
           <h2 class="visually-hidden">Добавления профиля</h2>
           <p class="add-profile__text">Добавьте свой профиль</p>
-          <img src="img/rates.png" class="add-profile__img">
+          <img alt="Иконка для тарифов" src="img/rates.png" class="add-profile__img">
           <dl class="add-profile__tariffs">
             <div class="add-profile__tariff-item">
               <dt class="add-profile__tariff add-profile__tariff--first">Базовое размещение</dt>
@@ -361,7 +366,7 @@
           </dl>
           <a class="add-profile__business">Показать тарифы для бизнеса</a>
         </div>
-        <section class="popup-business-rates popup-business-rates-show">
+        <section class="popup-business-rates popup-business-rates--show">
           <div class="popup-business-rates__center center">
             <h3 class="popup-business-rates__title">Бизнес-тарифы</h3>
             <dl class="popup-business-rates__list">
@@ -383,7 +388,7 @@
               </div>
             </dl>
           </div>
-          <button href="#" type="button" class="popup-business-rates__close">Закрыть окно</button>
+          <button type="button" class="popup-business-rates__close">Закрыть окно</button>
         </section>
       </section>
       <section class="feedback">
@@ -454,11 +459,8 @@
         </div>
       </section>
       <section class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59
-          .9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQ
-          vtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY
-          !5e0!3m2!1sru!2sru!4v1610900773172!5m2!1sru!2sru" width="100%" height="320" frameborder="0"
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610900773172!5m2!1sru!2sru"
           allowfullscreen="" aria-hidden="false" tabindex="0" class="map__frame" >
         </iframe>
       </section>
